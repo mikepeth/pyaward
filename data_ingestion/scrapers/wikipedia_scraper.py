@@ -1,14 +1,18 @@
 """
-Wikipedia Awards Scraper
-Scrapes award data from Wikipedia
+Improved Wikipedia Awards Scraper
+More robust parsing with fallback methods
 """
 import requests
 import re
 import logging
+import time
 from typing import List, Dict, Optional
 from datetime import date, datetime
 from bs4 import BeautifulSoup
-from tenacity import retry, stop_after_attempt, wait_exponential
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from models.data_models import Award
 
@@ -26,13 +30,20 @@ class WikipediaAwardsScraper:
             'User-Agent': 'MovieAwardsResearchBot/1.0 (Educational/Research Purpose)'
         })
     
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=10))
-    def _fetch_page(self, url: str) -> BeautifulSoup:
-        """Fetch and parse Wikipedia page"""
+    def _fetch_page(self, url: str, max_retries: int = 3) -> BeautifulSoup:
+        """Fetch and parse Wikipedia page with retries"""
         logger.info(f"Fetching: {url}")
-        response = self.session.get(url)
-        response.raise_for_status()
-        return BeautifulSoup(response.content, 'html.parser')
+        
+        for attempt in range(max_retries):
+            try:
+                response = self.session.get(url, timeout=30)
+                response.raise_for_status()
+                return BeautifulSoup(response.content, 'html.parser')
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    raise
+                logger.warning(f"Attempt {attempt + 1} failed: {e}. Retrying...")
+                time.sleep(2 ** attempt)  # Exponential backoff
     
     @staticmethod
     def _clean_text(text: str) -> str:
@@ -55,13 +66,15 @@ class WikipediaAwardsScraper:
         return f"{n}{suffix}"
 
 
-class AcademyAwardsScraper(WikipediaAwardsScraper):
-    """Scraper for Academy Awards (Oscars) from Wikipedia"""
+class ImprovedAcademyAwardsScraper(WikipediaAwardsScraper):
+    """
+    Improved scraper for Academy Awards with multiple parsing strategies
+    """
     
-    # Major categories to scrape
+    # Major categories we care about
     MAJOR_CATEGORIES = [
         'Best Picture',
-        'Best Director',
+        'Best Director', 
         'Best Actor',
         'Best Actress',
         'Best Supporting Actor',
@@ -96,43 +109,200 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
         
         try:
             soup = self._fetch_page(url)
-            awards = self._parse_awards_page(soup, year, ceremony_number)
+            
+            # Try multiple parsing strategies
+            awards = []
+            
+            # Strategy 1: Standard wikitable parsing
+            awards = self._parse_standard_tables(soup, year, ceremony_number)
+            
+            # Strategy 2: If strategy 1 fails, try section-based parsing
+            if not awards:
+                logger.info("Standard parsing failed, trying section-based parsing")
+                awards = self._parse_by_sections(soup, year, ceremony_number)
+            
+            # Strategy 3: Try finding lists in the content
+            if not awards:
+                logger.info("Section parsing failed, trying list-based parsing")
+                awards = self._parse_lists(soup, year, ceremony_number)
+            
             logger.info(f"Scraped {len(awards)} nominations/wins for year {year}")
             return awards
+            
         except Exception as e:
             logger.error(f"Error scraping year {year}: {e}")
+            logger.exception("Full traceback:")
             return []
     
-    def _parse_awards_page(
+    def _parse_standard_tables(
         self,
         soup: BeautifulSoup,
         year: int,
         ceremony_number: int
     ) -> List[Award]:
-        """Parse awards from the ceremony page"""
+        """Standard wikitable-based parsing"""
         awards = []
-        
-        # Method 1: Find tables with class 'wikitable'
         tables = soup.find_all('table', class_='wikitable')
         
+        logger.info(f"Found {len(tables)} wikitables")
+        
         for table in tables:
-            # Find the category header (usually in a preceding h3 or h4)
             category = self._find_category_header(table)
             
-            if not category or not self._is_major_category(category):
+            if not category:
                 continue
             
-            # Parse nominees from table
+            if not self._is_major_category(category):
+                logger.debug(f"Skipping category: {category}")
+                continue
+            
+            logger.info(f"Parsing category: {category}")
             nominees = self._parse_nominees_table(table, category, year, ceremony_number)
             awards.extend(nominees)
         
-        # Method 2: Also check for structured data in infobox
-        # Some years have different HTML structure
-        if not awards:
-            logger.warning(f"No awards found with standard method for {year}, trying alternative parsing")
-            awards = self._parse_alternative_structure(soup, year, ceremony_number)
+        return awards
+    
+    def _parse_by_sections(
+        self,
+        soup: BeautifulSoup,
+        year: int,
+        ceremony_number: int
+    ) -> List[Award]:
+        """Parse by finding category sections (h2, h3 headers)"""
+        awards = []
+        
+        # Find all section headers
+        headers = soup.find_all(['h2', 'h3'])
+        
+        for header in headers:
+            # Get section title
+            headline = header.find('span', class_='mw-headline')
+            if not headline:
+                continue
+            
+            category = self._clean_text(headline.get_text())
+            
+            if not self._is_major_category(category):
+                continue
+            
+            logger.info(f"Found section: {category}")
+            
+            # Find content after this header
+            # Look for the next table, ul, or dl
+            current = header.find_next_sibling()
+            
+            while current and current.name not in ['h2', 'h3', 'h4']:
+                if current.name == 'table':
+                    nominees = self._parse_nominees_table(
+                        current, category, year, ceremony_number
+                    )
+                    awards.extend(nominees)
+                    break
+                elif current.name in ['ul', 'dl']:
+                    nominees = self._parse_list_items(
+                        current, category, year, ceremony_number
+                    )
+                    awards.extend(nominees)
+                    break
+                
+                current = current.find_next_sibling()
         
         return awards
+    
+    def _parse_lists(
+        self,
+        soup: BeautifulSoup,
+        year: int,
+        ceremony_number: int
+    ) -> List[Award]:
+        """Parse from list elements (ul/dl)"""
+        awards = []
+        
+        # Find all list elements
+        lists = soup.find_all(['ul', 'dl'])
+        
+        for list_elem in lists:
+            # Check if this list is under a relevant category
+            prev_header = list_elem.find_previous(['h2', 'h3', 'h4'])
+            
+            if not prev_header:
+                continue
+            
+            category = self._clean_text(prev_header.get_text())
+            
+            if not self._is_major_category(category):
+                continue
+            
+            logger.info(f"Parsing list for category: {category}")
+            nominees = self._parse_list_items(list_elem, category, year, ceremony_number)
+            awards.extend(nominees)
+        
+        return awards
+    
+    def _parse_list_items(
+        self,
+        list_elem,
+        category: str,
+        year: int,
+        ceremony_number: int
+    ) -> List[Award]:
+        """Parse nominees from list items (li or dd elements)"""
+        nominees = []
+        items = list_elem.find_all(['li', 'dd'])
+        
+        for item in items:
+            # Get text content
+            text = self._clean_text(item.get_text())
+            
+            # Skip empty items
+            if not text or len(text) < 3:
+                continue
+            
+            # Check if winner (often has bold, or specific marker)
+            is_winner = bool(item.find(['b', 'strong'])) or '(winner)' in text.lower()
+            
+            # Extract movie title and person
+            links = item.find_all('a', href=True)
+            
+            if not links:
+                continue
+            
+            movie_title = None
+            person_name = None
+            
+            # First substantial link is usually the movie or person
+            for link in links:
+                link_text = self._clean_text(link.get_text())
+                href = link.get('href', '')
+                
+                if not link_text or href.startswith('#'):
+                    continue
+                
+                if movie_title is None:
+                    movie_title = link_text
+                elif person_name is None and self._is_person_category(category):
+                    person_name = link_text
+            
+            # Determine person role
+            person_role = None
+            if person_name:
+                person_role = self._get_person_role(category)
+            
+            award = Award(
+                award_name="Academy Awards",
+                ceremony_year=year,
+                ceremony_number=ceremony_number,
+                category=category,
+                movie_title=movie_title,
+                person_name=person_name,
+                person_role=person_role,
+                won=is_winner,
+                nominated=True
+            )
+            
+            nominees.append(award)
+        
+        return nominees
     
     def _find_category_header(self, table) -> Optional[str]:
         """Find the category header before a table"""
@@ -144,13 +314,12 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
             for edit_link in current.find_all('span', class_='mw-editsection'):
                 edit_link.decompose()
             
-            category = self._clean_text(current.get_text())
-            
-            # Sometimes the category is in a span with specific formatting
-            if not category:
-                span = current.find('span', class_='mw-headline')
-                if span:
-                    category = self._clean_text(span.get_text())
+            # Try to get headline span
+            headline = current.find('span', class_='mw-headline')
+            if headline:
+                category = self._clean_text(headline.get_text())
+            else:
+                category = self._clean_text(current.get_text())
             
             return category
         
@@ -193,12 +362,10 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
             if not links:
                 continue
             
-            # Usually: first link is the film, second link (if exists) is the person
             movie_title = None
             person_name = None
-            person_role = None
             
-            # Try to determine what the links represent
+            # Parse links
             for i, link in enumerate(links):
                 link_text = self._clean_text(link.get_text())
                 href = link.get('href', '')
@@ -215,6 +382,7 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
                     person_name = link_text
             
             # Determine person role based on category
+            person_role = None
             if person_name:
                 person_role = self._get_person_role(category)
             
@@ -237,23 +405,23 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
     
     def _is_winner_row(self, row) -> bool:
         """Determine if a row represents the winner"""
-        # Check for bold styling
+        # Method 1: Check for bold styling
         if row.find('b') or row.find('strong'):
             return True
         
-        # Check for background color (winners often have highlighted background)
+        # Method 2: Check for background color
         style = row.get('style', '').lower()
         if 'background' in style:
             # Common winner background colors
-            if any(color in style for color in ['#faeb86', '#ffc', 'gold', 'yellow']):
+            if any(color in style for color in ['#faeb86', '#ffc', 'gold', 'yellow', 'winner']):
                 return True
         
-        # Check for trophy emoji or "Winner" text
+        # Method 3: Check for trophy emoji or "Winner" text
         text = row.get_text()
         if '🏆' in text or 'winner' in text.lower():
             return True
         
-        # Check first cell for winner styling
+        # Method 4: Check first cell for winner styling
         first_cell = row.find(['td', 'th'])
         if first_cell:
             cell_style = first_cell.get('style', '').lower()
@@ -294,18 +462,6 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
         
         return 'Unknown'
     
-    def _parse_alternative_structure(
-        self,
-        soup: BeautifulSoup,
-        year: int,
-        ceremony_number: int
-    ) -> List[Award]:
-        """Try alternative parsing methods for different page structures"""
-        # This is a fallback for pages with different HTML structure
-        # Implementation would depend on specific page variations
-        logger.info("Using alternative parsing method")
-        return []
-    
     def scrape_multiple_years(self, start_year: int, end_year: int) -> List[Award]:
         """
         Scrape multiple years of Academy Awards
@@ -324,6 +480,7 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
                 awards = self.scrape_year(year)
                 all_awards.extend(awards)
                 logger.info(f"Year {year}: {len(awards)} nominations")
+                time.sleep(1)  # Be polite to Wikipedia
             except Exception as e:
                 logger.error(f"Failed to scrape year {year}: {e}")
                 continue
@@ -332,78 +489,38 @@ class AcademyAwardsScraper(WikipediaAwardsScraper):
         return all_awards
 
 
-class GoldenGlobesScraper(WikipediaAwardsScraper):
-    """Scraper for Golden Globe Awards from Wikipedia"""
-    
-    MAJOR_CATEGORIES = [
-        'Best Motion Picture – Drama',
-        'Best Motion Picture – Musical or Comedy',
-        'Best Director',
-        'Best Actor – Drama',
-        'Best Actress – Drama',
-        'Best Actor – Musical or Comedy',
-        'Best Actress – Musical or Comedy',
-        'Best Supporting Actor',
-        'Best Supporting Actress',
-        'Best Screenplay'
-    ]
-    
-    def scrape_year(self, year: int) -> List[Award]:
-        """
-        Scrape Golden Globes for a specific year
-        
-        Args:
-            year: Ceremony year
-            
-        Returns:
-            List of Award objects
-        """
-        # Golden Globes URL structure
-        ordinal = self._get_ordinal(year - 1944 + 1)  # First ceremony was 1944
-        url = f"{self.BASE_URL}{ordinal}_Golden_Globe_Awards"
-        
-        logger.info(f"Scraping {ordinal} Golden Globe Awards ({year})")
-        
-        try:
-            soup = self._fetch_page(url)
-            # Similar parsing logic to Academy Awards
-            # Implementation details would be similar
-            awards = []  # Placeholder
-            return awards
-        except Exception as e:
-            logger.error(f"Error scraping Golden Globes {year}: {e}")
-            return []
-
-
 if __name__ == "__main__":
-    # Example usage
+    # Test the improved scraper
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
     
-    # Initialize scraper
-    scraper = AcademyAwardsScraper()
+    scraper = ImprovedAcademyAwardsScraper()
     
-    # Example 1: Scrape single year
-    awards_2024 = scraper.scrape_year(2024)
-    print(f"\n2024 Academy Awards: {len(awards_2024)} nominations")
-    
-    # Show Best Picture nominees
-    best_picture = [a for a in awards_2024 if 'Best Picture' in a.category]
-    print("\nBest Picture Nominees:")
-    for award in best_picture:
-        status = "🏆 WINNER" if award.won else "  Nominee"
-        print(f"{status}: {award.movie_title}")
-    
-    # Example 2: Scrape multiple years
-    print("\n" + "="*50)
-    awards_range = scraper.scrape_multiple_years(2020, 2024)
-    print(f"\nTotal awards 2020-2024: {len(awards_range)}")
-    
-    # Count by category
-    from collections import Counter
-    categories = Counter([a.category for a in awards_range])
-    print("\nNominations by category:")
-    for category, count in categories.most_common(5):
-        print(f"  {category}: {count}")
+    # Test with multiple years
+    for test_year in [2023, 2024]:
+        print(f"\n{'='*60}")
+        print(f"Testing year: {test_year}")
+        print('='*60)
+        
+        awards = scraper.scrape_year(test_year)
+        print(f"\nTotal awards found: {len(awards)}")
+        
+        if awards:
+            # Show Best Picture
+            best_picture = [a for a in awards if 'Best Picture' in a.category]
+            if best_picture:
+                print(f"\nBest Picture nominees: {len(best_picture)}")
+                for award in best_picture:
+                    status = "🏆 WINNER" if award.won else "  Nominee"
+                    print(f"{status}: {award.movie_title}")
+            
+            # Count categories
+            from collections import Counter
+            categories = Counter([a.category for a in awards])
+            print(f"\nCategories found: {len(categories)}")
+            for cat, count in categories.most_common(10):
+                print(f"  {cat}: {count}")
+        else:
+            print("⚠ No awards found")

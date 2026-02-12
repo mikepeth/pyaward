@@ -1,1 +1,3 @@
-# My Project
+# pyAward
+
+## Can I vibecode an award predictor?

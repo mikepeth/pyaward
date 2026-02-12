@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).parent))
 
 from ingesters.tmdb_ingester import TMDbIngester
-from scrapers.wikipedia_scraper import AcademyAwardsScraper, GoldenGlobesScraper
+from scrapers.wikipedia_scraper import ImprovedAcademyAwardsScraper as AcademyAwardsScraper
 from utils.storage import DataStorage, DataMatcher
 
 # Setup logging

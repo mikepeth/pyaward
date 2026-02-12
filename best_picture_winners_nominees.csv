@@ -1,0 +1,622 @@
+Year,Title,Winner
+1927/28(1st),Wings,TRUE
+1927/28(1st),7th Heaven,FALSE
+1927/28(1st),The Racket,FALSE
+1928/29(2nd),The Broadway Melody,TRUE
+1928/29(2nd),Alibi,FALSE
+1928/29(2nd),The Hollywood Revue,FALSE
+1928/29(2nd),In Old Arizona,FALSE
+1928/29(2nd),The Patriot,FALSE
+1929/30(3rd),All Quiet on the Western Front,TRUE
+1929/30(3rd),The Big House,FALSE
+1929/30(3rd),Disraeli,FALSE
+1929/30(3rd),The Divorcee,FALSE
+1929/30(3rd),The Love Parade,FALSE
+1930/31(4th),Cimarron,TRUE
+1930/31(4th),East Lynne,FALSE
+1930/31(4th),The Front Page,FALSE
+1930/31(4th),Skippy,FALSE
+1930/31(4th),Trader Horn,FALSE
+1931/32(5th),Grand Hotel,TRUE
+1931/32(5th),Arrowsmith,FALSE
+1931/32(5th),Bad Girl,FALSE
+1931/32(5th),The Champ,FALSE
+1931/32(5th),Five Star Final,FALSE
+1931/32(5th),One Hour with You,FALSE
+1931/32(5th),Shanghai Express,FALSE
+1931/32(5th),The Smiling Lieutenant,FALSE
+1932/33(6th),Cavalcade,TRUE
+1932/33(6th),42nd Street,FALSE
+1932/33(6th),A Farewell to Arms,FALSE
+1932/33(6th),I Am a Fugitive from a Chain Gang,FALSE
+1932/33(6th),Lady for a Day,FALSE
+1932/33(6th),Little Women,FALSE
+1932/33(6th),The Private Life of Henry VIII,FALSE
+1932/33(6th),She Done Him Wrong,FALSE
+1932/33(6th),Smilin' Through,FALSE
+1932/33(6th),State Fair,FALSE
+1934(7th),It Happened One Night,TRUE
+1934(7th),The Barretts of Wimpole Street,FALSE
+1934(7th),Cleopatra,FALSE
+1934(7th),Flirtation Walk,FALSE
+1934(7th),The Gay Divorcee,FALSE
+1934(7th),Here Comes the Navy,FALSE
+1934(7th),The House of Rothschild,FALSE
+1934(7th),Imitation of Life,FALSE
+1934(7th),One Night of Love,FALSE
+1934(7th),The Thin Man,FALSE
+1934(7th),Viva Villa!,FALSE
+1934(7th),The White Parade,FALSE
+1935(8th),Mutiny on the Bounty,TRUE
+1935(8th),Alice Adams,FALSE
+1935(8th),Broadway Melody of 1936,FALSE
+1935(8th),Captain Blood,FALSE
+1935(8th),David Copperfield,FALSE
+1935(8th),The Informer,FALSE
+1935(8th),The Lives of a Bengal Lancer,FALSE
+1935(8th),A Midsummer Night's Dream,FALSE
+1935(8th),Les Misérables,FALSE
+1935(8th),Naughty Marietta,FALSE
+1935(8th),Ruggles of Red Gap,FALSE
+1935(8th),Top Hat,FALSE
+1936(9th),The Great Ziegfeld,TRUE
+1936(9th),Anthony Adverse,FALSE
+1936(9th),Dodsworth,FALSE
+1936(9th),Libeled Lady,FALSE
+1936(9th),Mr. Deeds Goes to Town,FALSE
+1936(9th),Romeo and Juliet,FALSE
+1936(9th),San Francisco,FALSE
+1936(9th),The Story of Louis Pasteur,FALSE
+1936(9th),A Tale of Two Cities,FALSE
+1936(9th),Three Smart Girls,FALSE
+1937(10th),The Life of Emile Zola,TRUE
+1937(10th),The Awful Truth,FALSE
+1937(10th),Captains Courageous,FALSE
+1937(10th),Dead End,FALSE
+1937(10th),The Good Earth,FALSE
+1937(10th),In Old Chicago,FALSE
+1937(10th),Lost Horizon,FALSE
+1937(10th),One Hundred Men and a Girl,FALSE
+1937(10th),Stage Door,FALSE
+1937(10th),A Star Is Born,FALSE
+1938(11th),You Can't Take It with You,TRUE
+1938(11th),The Adventures of Robin Hood,FALSE
+1938(11th),Alexander's Ragtime Band,FALSE
+1938(11th),Boys Town,FALSE
+1938(11th),The Citadel,FALSE
+1938(11th),Four Daughters,FALSE
+1938(11th),Grand Illusion,FALSE
+1938(11th),Jezebel,FALSE
+1938(11th),Pygmalion,FALSE
+1938(11th),Test Pilot,FALSE
+1939(12th),Gone with the Wind,TRUE
+1939(12th),Dark Victory,FALSE
+1939(12th),"Goodbye, Mr. Chips",FALSE
+1939(12th),Love Affair,FALSE
+1939(12th),Mr. Smith Goes to Washington,FALSE
+1939(12th),Ninotchka,FALSE
+1939(12th),Of Mice and Men,FALSE
+1939(12th),Stagecoach,FALSE
+1939(12th),The Wizard of Oz,FALSE
+1939(12th),Wuthering Heights,FALSE
+1940(13th),Rebecca,TRUE
+1940(13th),"All This, and Heaven Too",FALSE
+1940(13th),Foreign Correspondent,FALSE
+1940(13th),The Grapes of Wrath,FALSE
+1940(13th),The Great Dictator,FALSE
+1940(13th),Kitty Foyle,FALSE
+1940(13th),The Letter,FALSE
+1940(13th),The Long Voyage Home,FALSE
+1940(13th),Our Town,FALSE
+1940(13th),The Philadelphia Story,FALSE
+1941(14th),How Green Was My Valley,TRUE
+1941(14th),Blossoms in the Dust,FALSE
+1941(14th),Citizen Kane,FALSE
+1941(14th),Here Comes Mr. Jordan,FALSE
+1941(14th),Hold Back the Dawn,FALSE
+1941(14th),The Little Foxes,FALSE
+1941(14th),The Maltese Falcon,FALSE
+1941(14th),One Foot in Heaven,FALSE
+1941(14th),Sergeant York,FALSE
+1941(14th),Suspicion,FALSE
+1942(15th),Mrs. Miniver,TRUE
+1942(15th),49th Parallel,FALSE
+1942(15th),Kings Row,FALSE
+1942(15th),The Magnificent Ambersons,FALSE
+1942(15th),The Pied Piper,FALSE
+1942(15th),The Pride of the Yankees,FALSE
+1942(15th),Random Harvest,FALSE
+1942(15th),The Talk of the Town,FALSE
+1942(15th),Wake Island,FALSE
+1942(15th),Yankee Doodle Dandy,FALSE
+1943(16th),Casablanca,TRUE
+1943(16th),For Whom the Bell Tolls,FALSE
+1943(16th),Heaven Can Wait,FALSE
+1943(16th),The Human Comedy,FALSE
+1943(16th),In Which We Serve,FALSE
+1943(16th),Madame Curie,FALSE
+1943(16th),The More the Merrier,FALSE
+1943(16th),The Ox-Bow Incident,FALSE
+1943(16th),The Song of Bernadette,FALSE
+1943(16th),Watch on the Rhine,FALSE
+1944(17th),Going My Way,TRUE
+1944(17th),Double Indemnity,FALSE
+1944(17th),Gaslight,FALSE
+1944(17th),Since You Went Away,FALSE
+1944(17th),Wilson,FALSE
+1945(18th),The Lost Weekend,TRUE
+1945(18th),Anchors Aweigh,FALSE
+1945(18th),The Bells of St. Mary's,FALSE
+1945(18th),Mildred Pierce,FALSE
+1945(18th),Spellbound,FALSE
+1946(19th),The Best Years of Our Lives,TRUE
+1946(19th),Henry V,FALSE
+1946(19th),It's a Wonderful Life,FALSE
+1946(19th),The Razor's Edge,FALSE
+1946(19th),The Yearling,FALSE
+1947(20th),Gentleman's Agreement,TRUE
+1947(20th),The Bishop's Wife,FALSE
+1947(20th),Crossfire,FALSE
+1947(20th),Great Expectations,FALSE
+1947(20th),Miracle on 34th Street,FALSE
+1948(21st),Hamlet,TRUE
+1948(21st),Johnny Belinda,FALSE
+1948(21st),The Red Shoes,FALSE
+1948(21st),The Snake Pit,FALSE
+1948(21st),The Treasure of the Sierra Madre,FALSE
+1949(22nd),All the King's Men,TRUE
+1949(22nd),Battleground,FALSE
+1949(22nd),The Heiress,FALSE
+1949(22nd),A Letter to Three Wives,FALSE
+1949(22nd),Twelve O'Clock High,FALSE
+1950(23rd),All About Eve,TRUE
+1950(23rd),Born Yesterday,FALSE
+1950(23rd),Father of the Bride,FALSE
+1950(23rd),King Solomon's Mines,FALSE
+1950(23rd),Sunset Boulevard,FALSE
+1951(24th),An American in Paris,TRUE
+1951(24th),Decision Before Dawn,FALSE
+1951(24th),A Place in the Sun,FALSE
+1951(24th),Quo Vadis,FALSE
+1951(24th),A Streetcar Named Desire,FALSE
+1952(25th),The Greatest Show on Earth,TRUE
+1952(25th),High Noon,FALSE
+1952(25th),Ivanhoe,FALSE
+1952(25th),Moulin Rouge,FALSE
+1952(25th),The Quiet Man,FALSE
+1953(26th),From Here to Eternity,TRUE
+1953(26th),Julius Caesar,FALSE
+1953(26th),The Robe,FALSE
+1953(26th),Roman Holiday,FALSE
+1953(26th),Shane,FALSE
+1954(27th),On the Waterfront,TRUE
+1954(27th),The Caine Mutiny,FALSE
+1954(27th),The Country Girl,FALSE
+1954(27th),Seven Brides for Seven Brothers,FALSE
+1954(27th),Three Coins in the Fountain,FALSE
+1955(28th),Marty,TRUE
+1955(28th),Love Is a Many-Splendored Thing,FALSE
+1955(28th),Mister Roberts,FALSE
+1955(28th),Picnic,FALSE
+1955(28th),The Rose Tattoo,FALSE
+1956(29th),Around the World in 80 Days,TRUE
+1956(29th),Friendly Persuasion,FALSE
+1956(29th),Giant,FALSE
+1956(29th),The King and I,FALSE
+1956(29th),The Ten Commandments,FALSE
+1957(30th),The Bridge on the River Kwai,TRUE
+1957(30th),12 Angry Men,FALSE
+1957(30th),Peyton Place,FALSE
+1957(30th),Sayonara,FALSE
+1957(30th),Witness for the Prosecution,FALSE
+1958(31st),Gigi,TRUE
+1958(31st),Auntie Mame,FALSE
+1958(31st),Cat on a Hot Tin Roof,FALSE
+1958(31st),The Defiant Ones,FALSE
+1958(31st),Separate Tables,FALSE
+1959(32nd),Ben-Hur,TRUE
+1959(32nd),Anatomy of a Murder,FALSE
+1959(32nd),The Diary of Anne Frank,FALSE
+1959(32nd),The Nun's Story,FALSE
+1959(32nd),Room at the Top,FALSE
+1960(33rd),The Apartment,TRUE
+1960(33rd),The Alamo,FALSE
+1960(33rd),Elmer Gantry,FALSE
+1960(33rd),Sons and Lovers,FALSE
+1960(33rd),The Sundowners,FALSE
+1961(34th),West Side Story,TRUE
+1961(34th),Fanny,FALSE
+1961(34th),The Guns of Navarone,FALSE
+1961(34th),The Hustler,FALSE
+1961(34th),Judgment at Nuremberg,FALSE
+1962(35th),Lawrence of Arabia,TRUE
+1962(35th),The Longest Day,FALSE
+1962(35th),The Music Man,FALSE
+1962(35th),Mutiny on the Bounty,FALSE
+1962(35th),To Kill a Mockingbird,FALSE
+1963(36th),Tom Jones,TRUE
+1963(36th),America America,FALSE
+1963(36th),Cleopatra,FALSE
+1963(36th),How the West Was Won,FALSE
+1963(36th),Lilies of the Field,FALSE
+1964(37th),My Fair Lady,TRUE
+1964(37th),Becket,FALSE
+1964(37th),Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,FALSE
+1964(37th),Mary Poppins,FALSE
+1964(37th),Zorba the Greek,FALSE
+1965(38th),The Sound of Music,TRUE
+1965(38th),Darling,FALSE
+1965(38th),Doctor Zhivago,FALSE
+1965(38th),Ship of Fools,FALSE
+1965(38th),A Thousand Clowns,FALSE
+1966(39th),A Man for All Seasons,TRUE
+1966(39th),Alfie,FALSE
+1966(39th),"The Russians Are Coming, the Russians Are Coming",FALSE
+1966(39th),The Sand Pebbles,FALSE
+1966(39th),Who's Afraid of Virginia Woolf?,FALSE
+1967(40th),In the Heat of the Night,TRUE
+1967(40th),Bonnie and Clyde,FALSE
+1967(40th),Doctor Dolittle,FALSE
+1967(40th),The Graduate,FALSE
+1967(40th),Guess Who's Coming to Dinner,FALSE
+1968(41st),Oliver!,TRUE
+1968(41st),Funny Girl,FALSE
+1968(41st),The Lion in Winter,FALSE
+1968(41st),"Rachel, Rachel",FALSE
+1968(41st),Romeo and Juliet,FALSE
+1969(42nd),Midnight Cowboy,TRUE
+1969(42nd),Anne of the Thousand Days,FALSE
+1969(42nd),Butch Cassidy and the Sundance Kid,FALSE
+1969(42nd),"Hello, Dolly!",FALSE
+1969(42nd),Z,FALSE
+1970(43rd),Patton,TRUE
+1970(43rd),Airport,FALSE
+1970(43rd),Five Easy Pieces,FALSE
+1970(43rd),Love Story,FALSE
+1970(43rd),M*A*S*H,FALSE
+1971(44th),The French Connection,TRUE
+1971(44th),A Clockwork Orange,FALSE
+1971(44th),Fiddler on the Roof,FALSE
+1971(44th),The Last Picture Show,FALSE
+1971(44th),Nicholas and Alexandra,FALSE
+1972(45th),The Godfather,TRUE
+1972(45th),Cabaret,FALSE
+1972(45th),Deliverance,FALSE
+1972(45th),The Emigrants,FALSE
+1972(45th),Sounder,FALSE
+1973(46th),The Sting,TRUE
+1973(46th),American Graffiti,FALSE
+1973(46th),Cries and Whispers,FALSE
+1973(46th),The Exorcist,FALSE
+1973(46th),A Touch of Class,FALSE
+1974(47th),The Godfather Part II,TRUE
+1974(47th),Chinatown,FALSE
+1974(47th),The Conversation,FALSE
+1974(47th),Lenny,FALSE
+1974(47th),The Towering Inferno,FALSE
+1975(48th),One Flew Over the Cuckoo's Nest,TRUE
+1975(48th),Barry Lyndon,FALSE
+1975(48th),Dog Day Afternoon,FALSE
+1975(48th),Jaws,FALSE
+1975(48th),Nashville,FALSE
+1976(49th),Rocky,TRUE
+1976(49th),All the President's Men,FALSE
+1976(49th),Bound for Glory,FALSE
+1976(49th),Network,FALSE
+1976(49th),Taxi Driver,FALSE
+1977(50th),Annie Hall,TRUE
+1977(50th),The Goodbye Girl,FALSE
+1977(50th),Julia,FALSE
+1977(50th),Star Wars,FALSE
+1977(50th),The Turning Point,FALSE
+1978(51st),The Deer Hunter,TRUE
+1978(51st),Coming Home,FALSE
+1978(51st),Heaven Can Wait,FALSE
+1978(51st),Midnight Express,FALSE
+1978(51st),An Unmarried Woman,FALSE
+1979(52nd),Kramer vs. Kramer,TRUE
+1979(52nd),All That Jazz,FALSE
+1979(52nd),Apocalypse Now,FALSE
+1979(52nd),Breaking Away,FALSE
+1979(52nd),Norma Rae,FALSE
+1980(53rd),Ordinary People,TRUE
+1980(53rd),Coal Miner's Daughter,FALSE
+1980(53rd),The Elephant Man,FALSE
+1980(53rd),Raging Bull,FALSE
+1980(53rd),Tess,FALSE
+1981(54th),Chariots of Fire,TRUE
+1981(54th),Atlantic City,FALSE
+1981(54th),On Golden Pond,FALSE
+1981(54th),Raiders of the Lost Ark,FALSE
+1981(54th),Reds,FALSE
+1982(55th),Gandhi,TRUE
+1982(55th),E.T. the Extra-Terrestrial,FALSE
+1982(55th),Missing,FALSE
+1982(55th),Tootsie,FALSE
+1982(55th),The Verdict,FALSE
+1983(56th),Terms of Endearment,TRUE
+1983(56th),The Big Chill,FALSE
+1983(56th),The Dresser,FALSE
+1983(56th),The Right Stuff,FALSE
+1983(56th),Tender Mercies,FALSE
+1984(57th),Amadeus,TRUE
+1984(57th),The Killing Fields,FALSE
+1984(57th),A Passage to India,FALSE
+1984(57th),Places in the Heart,FALSE
+1984(57th),A Soldier's Story,FALSE
+1985(58th),Out of Africa,TRUE
+1985(58th),The Color Purple,FALSE
+1985(58th),Kiss of the Spider Woman,FALSE
+1985(58th),Prizzi's Honor,FALSE
+1985(58th),Witness,FALSE
+1986(59th),Platoon,TRUE
+1986(59th),Children of a Lesser God,FALSE
+1986(59th),Hannah and Her Sisters,FALSE
+1986(59th),The Mission,FALSE
+1986(59th),A Room with a View,FALSE
+1987(60th),The Last Emperor,TRUE
+1987(60th),Broadcast News,FALSE
+1987(60th),Fatal Attraction,FALSE
+1987(60th),Hope and Glory,FALSE
+1987(60th),Moonstruck,FALSE
+1988(61st),Rain Man,TRUE
+1988(61st),The Accidental Tourist,FALSE
+1988(61st),Dangerous Liaisons,FALSE
+1988(61st),Mississippi Burning,FALSE
+1988(61st),Working Girl,FALSE
+1989(62nd),Driving Miss Daisy,TRUE
+1989(62nd),Born on the Fourth of July,FALSE
+1989(62nd),Dead Poets Society,FALSE
+1989(62nd),Field of Dreams,FALSE
+1989(62nd),My Left Foot,FALSE
+1990(63rd),Dances With Wolves,TRUE
+1990(63rd),Awakenings,FALSE
+1990(63rd),Ghost,FALSE
+1990(63rd),The Godfather Part III,FALSE
+1990(63rd),Goodfellas,FALSE
+1991(64th),The Silence of the Lambs,TRUE
+1991(64th),Beauty and the Beast,FALSE
+1991(64th),Bugsy,FALSE
+1991(64th),JFK,FALSE
+1991(64th),The Prince of Tides,FALSE
+1992(65th),Unforgiven,TRUE
+1992(65th),The Crying Game,FALSE
+1992(65th),A Few Good Men,FALSE
+1992(65th),Howards End,FALSE
+1992(65th),Scent of a Woman,FALSE
+1993(66th),Schindler's List,TRUE
+1993(66th),The Fugitive,FALSE
+1993(66th),In the Name of the Father,FALSE
+1993(66th),The Piano,FALSE
+1993(66th),The Remains of the Day,FALSE
+1994(67th),Forrest Gump,TRUE
+1994(67th),Four Weddings and a Funeral,FALSE
+1994(67th),Pulp Fiction,FALSE
+1994(67th),Quiz Show,FALSE
+1994(67th),The Shawshank Redemption,FALSE
+1995(68th),Braveheart,TRUE
+1995(68th),Apollo 13,FALSE
+1995(68th),Babe,FALSE
+1995(68th),Il Postino: The Postman,FALSE
+1995(68th),Sense and Sensibility,FALSE
+1996(69th),The English Patient,TRUE
+1996(69th),Fargo,FALSE
+1996(69th),Jerry Maguire,FALSE
+1996(69th),Secrets & Lies,FALSE
+1996(69th),Shine,FALSE
+1997(70th),Titanic,TRUE
+1997(70th),As Good as It Gets,FALSE
+1997(70th),The Full Monty,FALSE
+1997(70th),Good Will Hunting,FALSE
+1997(70th),L.A. Confidential,FALSE
+1998(71st),Shakespeare in Love,TRUE
+1998(71st),Elizabeth,FALSE
+1998(71st),Life Is Beautiful,FALSE
+1998(71st),Saving Private Ryan,FALSE
+1998(71st),The Thin Red Line,FALSE
+1999(72nd),American Beauty,TRUE
+1999(72nd),The Cider House Rules,FALSE
+1999(72nd),The Green Mile,FALSE
+1999(72nd),The Insider,FALSE
+1999(72nd),The Sixth Sense,FALSE
+2000(73rd),Gladiator,TRUE
+2000(73rd),Chocolat,FALSE
+2000(73rd),"Crouching Tiger, Hidden Dragon",FALSE
+2000(73rd),Erin Brockovich,FALSE
+2000(73rd),Traffic,FALSE
+2001(74th),A Beautiful Mind,TRUE
+2001(74th),Gosford Park,FALSE
+2001(74th),In the Bedroom,FALSE
+2001(74th),The Lord of the Rings: The Fellowship of the Ring,FALSE
+2001(74th),Moulin Rouge!,FALSE
+2002(75th),Chicago,TRUE
+2002(75th),Gangs of New York,FALSE
+2002(75th),The Hours,FALSE
+2002(75th),The Lord of the Rings: The Two Towers,FALSE
+2002(75th),The Pianist,FALSE
+2003(76th),The Lord of the Rings: The Return of the King,TRUE
+2003(76th),Lost in Translation,FALSE
+2003(76th),Master and Commander: The Far Side of the World,FALSE
+2003(76th),Mystic River,FALSE
+2003(76th),Seabiscuit,FALSE
+2004(77th),Million Dollar Baby,TRUE
+2004(77th),The Aviator,FALSE
+2004(77th),Finding Neverland,FALSE
+2004(77th),Ray,FALSE
+2004(77th),Sideways,FALSE
+2005(78th),Crash,TRUE
+2005(78th),Brokeback Mountain,FALSE
+2005(78th),Capote,FALSE
+2005(78th),"Good Night, and Good Luck",FALSE
+2005(78th),Munich,FALSE
+2006(79th),The Departed,TRUE
+2006(79th),Babel,FALSE
+2006(79th),Letters from Iwo Jima,FALSE
+2006(79th),Little Miss Sunshine,FALSE
+2006(79th),The Queen,FALSE
+2007(80th),No Country for Old Men,TRUE
+2007(80th),Atonement,FALSE
+2007(80th),Juno,FALSE
+2007(80th),Michael Clayton,FALSE
+2007(80th),There Will Be Blood,FALSE
+2008(81st),Slumdog Millionaire,TRUE
+2008(81st),The Curious Case of Benjamin Button,FALSE
+2008(81st),Frost/Nixon,FALSE
+2008(81st),Milk,FALSE
+2008(81st),The Reader,FALSE
+2009(82nd),The Hurt Locker,TRUE
+2009(82nd),Avatar,FALSE
+2009(82nd),The Blind Side,FALSE
+2009(82nd),District 9,FALSE
+2009(82nd),An Education,FALSE
+2009(82nd),Inglourious Basterds,FALSE
+2009(82nd),"Precious: Based on the Novel ""Push"" by Sapphire",FALSE
+2009(82nd),A Serious Man,FALSE
+2009(82nd),Up,FALSE
+2009(82nd),Up in the Air,FALSE
+2010(83rd),The King's Speech,TRUE
+2010(83rd),Black Swan,FALSE
+2010(83rd),The Fighter,FALSE
+2010(83rd),Inception,FALSE
+2010(83rd),The Kids Are All Right,FALSE
+2010(83rd),127 Hours,FALSE
+2010(83rd),The Social Network,FALSE
+2010(83rd),Toy Story 3,FALSE
+2010(83rd),True Grit,FALSE
+2010(83rd),Winter's Bone,FALSE
+2011(84th),The Artist,TRUE
+2011(84th),The Descendants,FALSE
+2011(84th),Extremely Loud & Incredibly Close,FALSE
+2011(84th),The Help,FALSE
+2011(84th),Hugo,FALSE
+2011(84th),Midnight in Paris,FALSE
+2011(84th),Moneyball,FALSE
+2011(84th),The Tree of Life,FALSE
+2011(84th),War Horse,FALSE
+2012(85th),Argo,TRUE
+2012(85th),Amour,FALSE
+2012(85th),Beasts of the Southern Wild,FALSE
+2012(85th),Django Unchained,FALSE
+2012(85th),Life of Pi,FALSE
+2012(85th),Lincoln,FALSE
+2012(85th),Les Misérables,FALSE
+2012(85th),Silver Linings Playbook,FALSE
+2012(85th),Zero Dark Thirty,FALSE
+2013(86th),12 Years a Slave,TRUE
+2013(86th),American Hustle,FALSE
+2013(86th),Captain Phillips,FALSE
+2013(86th),Dallas Buyers Club,FALSE
+2013(86th),Gravity,FALSE
+2013(86th),Her,FALSE
+2013(86th),Nebraska,FALSE
+2013(86th),Philomena,FALSE
+2013(86th),The Wolf of Wall Street,FALSE
+2014(87th),Birdman or (The Unexpected Virtue of Ignorance),TRUE
+2014(87th),American Sniper,FALSE
+2014(87th),Boyhood,FALSE
+2014(87th),The Grand Budapest Hotel,FALSE
+2014(87th),The Imitation Game,FALSE
+2014(87th),Selma,FALSE
+2014(87th),The Theory of Everything,FALSE
+2014(87th),Whiplash,FALSE
+2015(88th),Spotlight,TRUE
+2015(88th),The Big Short,FALSE
+2015(88th),Bridge of Spies,FALSE
+2015(88th),Brooklyn,FALSE
+2015(88th),Mad Max: Fury Road,FALSE
+2015(88th),The Martian,FALSE
+2015(88th),The Revenant,FALSE
+2015(88th),Room,FALSE
+2016(89th),Moonlight,TRUE
+2016(89th),Arrival,FALSE
+2016(89th),Fences,FALSE
+2016(89th),Hacksaw Ridge,FALSE
+2016(89th),Hell or High Water,FALSE
+2016(89th),Hidden Figures,FALSE
+2016(89th),La La Land,FALSE
+2016(89th),Lion,FALSE
+2016(89th),Manchester by the Sea,FALSE
+2017(90th),The Shape of Water,TRUE
+2017(90th),Call Me by Your Name,FALSE
+2017(90th),Darkest Hour,FALSE
+2017(90th),Dunkirk,FALSE
+2017(90th),Get Out,FALSE
+2017(90th),Lady Bird,FALSE
+2017(90th),Phantom Thread,FALSE
+2017(90th),The Post,FALSE
+2017(90th),"Three Billboards Outside Ebbing, Missouri",FALSE
+2018(91st),Green Book,TRUE
+2018(91st),Black Panther,FALSE
+2018(91st),BlacKkKlansman,FALSE
+2018(91st),Bohemian Rhapsody,FALSE
+2018(91st),The Favourite,FALSE
+2018(91st),Roma,FALSE
+2018(91st),A Star Is Born,FALSE
+2018(91st),Vice,FALSE
+2019(92nd),Parasite,TRUE
+2019(92nd),Ford v Ferrari,FALSE
+2019(92nd),The Irishman,FALSE
+2019(92nd),Jojo Rabbit,FALSE
+2019(92nd),Joker,FALSE
+2019(92nd),Little Women,FALSE
+2019(92nd),Marriage Story,FALSE
+2019(92nd),1917,FALSE
+2019(92nd),Once Upon a Time in Hollywood,FALSE
+2020(93rd),Nomadland,TRUE
+2020(93rd),The Father,FALSE
+2020(93rd),Judas and the Black Messiah,FALSE
+2020(93rd),Mank,FALSE
+2020(93rd),Minari,FALSE
+2020(93rd),Promising Young Woman,FALSE
+2020(93rd),Sound of Metal,FALSE
+2020(93rd),The Trial of the Chicago 7,FALSE
+2021(94th),CODA,TRUE
+2021(94th),Belfast,FALSE
+2021(94th),Don't Look Up,FALSE
+2021(94th),Drive My Car,FALSE
+2021(94th),Dune,FALSE
+2021(94th),King Richard,FALSE
+2021(94th),Licorice Pizza,FALSE
+2021(94th),Nightmare Alley,FALSE
+2021(94th),The Power of the Dog,FALSE
+2021(94th),West Side Story,FALSE
+2022(95th),Everything Everywhere All at Once,TRUE
+2022(95th),All Quiet on the Western Front,FALSE
+2022(95th),Avatar: The Way of Water,FALSE
+2022(95th),The Banshees of Inisherin,FALSE
+2022(95th),Elvis,FALSE
+2022(95th),The Fabelmans,FALSE
+2022(95th),Tár,FALSE
+2022(95th),Top Gun: Maverick,FALSE
+2022(95th),Triangle of Sadness,FALSE
+2022(95th),Women Talking,FALSE
+2023(96th),Oppenheimer,TRUE
+2023(96th),American Fiction,FALSE
+2023(96th),Anatomy of a Fall,FALSE
+2023(96th),Barbie,FALSE
+2023(96th),The Holdovers,FALSE
+2023(96th),Killers of the Flower Moon,FALSE
+2023(96th),Maestro,FALSE
+2023(96th),Past Lives,FALSE
+2023(96th),Poor Things,FALSE
+2023(96th),The Zone of Interest,FALSE
+2024(97th),Anora,TRUE
+2024(97th),The Brutalist,FALSE
+2024(97th),A Complete Unknown,FALSE
+2024(97th),Conclave,FALSE
+2024(97th),Dune: Part Two,FALSE
+2024(97th),Emilia Pérez,FALSE
+2024(97th),I'm Still Here,FALSE
+2024(97th),Nickel Boys,FALSE
+2024(97th),The Substance,FALSE
+2024(97th),Wicked,FALSE
+2025(98th),Bugonia,FALSE
+2025(98th),F1,FALSE
+2025(98th),Frankenstein,FALSE
+2025(98th),Hamnet,FALSE
+2025(98th),Marty Supreme,FALSE
+2025(98th),One Battle After Another,FALSE
+2025(98th),The Secret Agent,FALSE
+2025(98th),Sentimental Value,FALSE
+2025(98th),Sinners,FALSE
+2025(98th),Train Dreams,FALSE

@@ -11,3 +11,30 @@
 2026-02-11 20:45:22,778 - utils.storage - WARNING - No awards to save
 2026-02-11 20:45:22,778 - __main__ - INFO - Collected 0 Academy Awards nominations for 2024
 2026-02-11 20:45:22,778 - __main__ - INFO - Data collection completed successfully!
+2026-02-11 20:50:30,939 - ingesters.tmdb_ingester - INFO - TMDb Ingester initialized
+2026-02-11 20:50:30,939 - utils.storage - INFO - Data storage initialized at: data
+2026-02-11 20:50:30,939 - __main__ - INFO - Data Collection Pipeline initialized
+2026-02-11 20:50:30,939 - __main__ - INFO - Collecting Academy Awards for 2023
+2026-02-11 20:50:30,939 - scrapers.wikipedia_scraper - INFO - Scraping 95th Academy Awards (2023)
+2026-02-11 20:50:30,939 - scrapers.wikipedia_scraper - INFO - Fetching: https://en.wikipedia.org/wiki/95th_Academy_Awards
+2026-02-11 20:50:31,268 - scrapers.wikipedia_scraper - WARNING - No awards found with standard method for 2023, trying alternative parsing
+2026-02-11 20:50:31,268 - scrapers.wikipedia_scraper - INFO - Using alternative parsing method
+2026-02-11 20:50:31,268 - scrapers.wikipedia_scraper - INFO - Scraped 0 nominations/wins for year 2023
+2026-02-11 20:50:31,269 - utils.storage - INFO - Saved 0 awards to data/raw/academy_awards_2023_20260211.json
+2026-02-11 20:50:31,269 - utils.storage - WARNING - No awards to save
+2026-02-11 20:50:31,269 - __main__ - INFO - Collected 0 Academy Awards nominations for 2023
+2026-02-11 20:50:31,269 - __main__ - INFO - Data collection completed successfully!
+2026-02-11 20:53:10,198 - ingesters.tmdb_ingester - INFO - TMDb Ingester initialized
+2026-02-11 20:53:10,198 - utils.storage - INFO - Data storage initialized at: data
+2026-02-11 20:53:10,198 - __main__ - INFO - Data Collection Pipeline initialized
+2026-02-11 20:53:10,198 - __main__ - INFO - Collecting Academy Awards for 2023
+2026-02-11 20:53:10,198 - scrapers.wikipedia_scraper - INFO - Scraping 95th Academy Awards (2023)
+2026-02-11 20:53:10,198 - scrapers.wikipedia_scraper - INFO - Fetching: https://en.wikipedia.org/wiki/95th_Academy_Awards
+2026-02-11 20:53:10,522 - scrapers.wikipedia_scraper - INFO - Found 5 wikitables
+2026-02-11 20:53:10,525 - scrapers.wikipedia_scraper - INFO - Standard parsing failed, trying section-based parsing
+2026-02-11 20:53:10,542 - scrapers.wikipedia_scraper - INFO - Section parsing failed, trying list-based parsing
+2026-02-11 20:53:10,727 - scrapers.wikipedia_scraper - INFO - Scraped 0 nominations/wins for year 2023
+2026-02-11 20:53:10,728 - utils.storage - INFO - Saved 0 awards to data/raw/academy_awards_2023_20260211.json
+2026-02-11 20:53:10,728 - utils.storage - WARNING - No awards to save
+2026-02-11 20:53:10,728 - __main__ - INFO - Collected 0 Academy Awards nominations for 2023
+2026-02-11 20:53:10,728 - __main__ - INFO - Data collection completed successfully!
