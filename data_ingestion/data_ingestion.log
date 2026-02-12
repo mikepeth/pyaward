@@ -1,0 +1,13 @@
+2026-02-11 20:45:22,444 - ingesters.tmdb_ingester - INFO - TMDb Ingester initialized
+2026-02-11 20:45:22,444 - utils.storage - INFO - Data storage initialized at: data
+2026-02-11 20:45:22,444 - __main__ - INFO - Data Collection Pipeline initialized
+2026-02-11 20:45:22,444 - __main__ - INFO - Collecting Academy Awards for 2024
+2026-02-11 20:45:22,444 - scrapers.wikipedia_scraper - INFO - Scraping 96th Academy Awards (2024)
+2026-02-11 20:45:22,444 - scrapers.wikipedia_scraper - INFO - Fetching: https://en.wikipedia.org/wiki/96th_Academy_Awards
+2026-02-11 20:45:22,777 - scrapers.wikipedia_scraper - WARNING - No awards found with standard method for 2024, trying alternative parsing
+2026-02-11 20:45:22,777 - scrapers.wikipedia_scraper - INFO - Using alternative parsing method
+2026-02-11 20:45:22,777 - scrapers.wikipedia_scraper - INFO - Scraped 0 nominations/wins for year 2024
+2026-02-11 20:45:22,778 - utils.storage - INFO - Saved 0 awards to data/raw/academy_awards_2024_20260211.json
+2026-02-11 20:45:22,778 - utils.storage - WARNING - No awards to save
+2026-02-11 20:45:22,778 - __main__ - INFO - Collected 0 Academy Awards nominations for 2024
+2026-02-11 20:45:22,778 - __main__ - INFO - Data collection completed successfully!

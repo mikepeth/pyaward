@@ -1,0 +1,18 @@
+[
+  {
+    "award_name": "Academy Awards",
+    "ceremony_year": 2024,
+    "ceremony_number": null,
+    "category": "Best Picture",
+    "movie_title": "Oppenheimer",
+    "movie_tmdb_id": null,
+    "movie_imdb_id": null,
+    "person_name": null,
+    "person_role": null,
+    "won": true,
+    "nominated": true,
+    "announcement_date": null,
+    "ceremony_date": null,
+    "notes": ""
+  }
+]
