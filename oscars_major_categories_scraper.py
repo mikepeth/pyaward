@@ -30,7 +30,7 @@ CATEGORIES = {
     }
 }
 
-DEBUG = True
+DEBUG = False
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger()
@@ -138,7 +138,7 @@ def main():
         if not data:
             continue
 
-        csv_filename = f"{category_name.replace(' ', '_')}.csv"
+        csv_filename = f"./data/{category_name.replace(' ', '_')}.csv"
         save_csv(data, csv_filename, ["Year", "Nominee", "Movie", "Winner"])
 
 if __name__ == "__main__":
