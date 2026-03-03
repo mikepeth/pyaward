@@ -1,0 +1,23 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Environments
+.env
+.venv/
+venv/
+venv312/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
