@@ -1,0 +1,513 @@
+Year,Nominee,Movie,Winner
+,1947,The Best Years of Our Lives,True
+,1948,Hamlet,True
+,Crossfire,Crossfire,False
+,The Fallen Idol,The Fallen Idol,False
+,Monsieur Vincent,Monsieur Vincent,False
+,The Naked City,The Naked City,False
+,Paisan (Paisà),Paisan,False
+,Four Steps in the Clouds (Quattro passi fra le nuvole),Four Steps in the Clouds,False
+,1949,Bicycle Thieves,True
+,The Berliner (Berliner Ballade),The Berliner,False
+,The Last Stage (Ostatni etap),The Last Stage,False
+,The Set-Up,The Set-Up,False
+,The Third Man,The Third Man,False
+,The Treasure of the Sierra Madre,The Treasure of the Sierra Madre,False
+,The Window,The Window,False
+,1950,All About Eve,True
+,The Asphalt Jungle,The Asphalt Jungle,False
+,Beauty and the Devil (La Beauté du diable),Beauty and the Devil,False
+,Intruder in the Dust,Intruder in the Dust,False
+,The Men,The Men,False
+,On the Town,On the Town,False
+,Orphée (US: Orpheus),Orphée,False
+,1951,La Ronde,True
+,An American in Paris †,An American in Paris,False
+,The Browning Version,The Browning Version,False
+,Detective Story,Detective Story,False
+,Sunday in August (Domenica d'agosto),Sunday in August,False
+,Fourteen Hours,Fourteen Hours,False
+,Miss Julie (Fröken Julie),Miss Julie,False
+,The Lavender Hill Mob,The Lavender Hill Mob,False
+,The Magic Box (1951),The Magic Box,False
+,The Magic Garden,The Magic Garden,False
+,The Man in the White Suit,The Man in the White Suit,False
+,No Resting Place,No Resting Place,False
+,The Red Badge of Courage,The Red Badge of Courage,False
+,The Small Miracle,The Small Miracle,False
+,The Sound of Fury,The Sound of Fury,False
+,A Walk in the Sun,A Walk in the Sun,False
+,White Corridors,White Corridors,False
+,Edward and Caroline (Édouard et Caroline),Edward and Caroline,False
+,1952,The Sound Barrier,True
+,The African Queen,The African Queen,False
+,Angels One Five,Angels One Five,False
+,The Boy Kumasenu,The Boy Kumasenu,False
+,Carrie,Carrie,False
+,Casque d'Or,Casque d'Or,False
+,"Cry, the Beloved Country","Cry, the Beloved Country",False
+,Death of a Salesman,Death of a Salesman,False
+,Limelight,Limelight,False
+,Mandy,Mandy,False
+,Miracle in Milan (Miracolo a Milano),Miracle in Milan,False
+,The Young and the Damned (Los olvidados),The Young and the Damned,False
+,Outcast of the Islands,Outcast of the Islands,False
+,"Rashomon (羅生門, Rashōmon)",Rashomon,False
+,The River,The River,False
+,Singin' in the Rain,Singin' in the Rain,False
+,A Streetcar Named Desire,A Streetcar Named Desire,False
+,Viva Zapata!,Viva Zapata!,False
+,1953,Forbidden Games,True
+,The Bad and the Beautiful,The Bad and the Beautiful,False
+,"Come Back, Little Sheba","Come Back, Little Sheba",False
+,The Cruel Sea,The Cruel Sea,False
+,Two Cents Worth of Hope (Due soldi di speranza),Two Cents Worth of Hope,False
+,From Here to Eternity †,From Here to Eternity,False
+,Genevieve,Genevieve,False
+,The Heart of the Matter,The Heart of the Matter,False
+,Julius Caesar,Julius Caesar,False
+,The Kidnappers (US: The Little Kidnappers),The Kidnappers,False
+,Lili,Lili,False
+,The Medium (Il medium),The Medium,False
+,Mogambo,Mogambo,False
+,Moulin Rouge,Moulin Rouge,False
+,Are We All Murderers? (Nous sommes tous des assassins),Are We All Murderers?,False
+,Little World of Don Camillo (Don Camillo),Little World of Don Camillo,False
+,Roman Holiday,Roman Holiday,False
+,Shane,Shane,False
+,The Sun Shines Bright,The Sun Shines Bright,False
+,1954,The Wages of Fear,True
+,The Caine Mutiny,The Caine Mutiny,False
+,Carrington V.C.,Carrington V.C.,False
+,The Divided Heart,The Divided Heart,False
+,Doctor in the House,Doctor in the House,False
+,Executive Suite,Executive Suite,False
+,"For Better, for Worse","For Better, for Worse",False
+,Hobson's Choice,Hobson's Choice,False
+,How to Marry a Millionaire,How to Marry a Millionaire,False
+,"Gate of Hell (地獄門, Jigokumon)",Gate of Hell,False
+,The Maggie,The Maggie,False
+,The Moon Is Blue,The Moon Is Blue,False
+,On the Waterfront †,On the Waterfront,False
+,"Bread, Love and Dreams (Pane, amore e fantasia)","Bread, Love and Dreams",False
+,The Purple Plain,The Purple Plain,False
+,Rear Window,Rear Window,False
+,Riot in Cell Block 11,Riot in Cell Block 11,False
+,Robinson Crusoe (Aventuras de Robinson Crusoe),Robinson Crusoe,False
+,Romeo and Juliet,Romeo and Juliet,False
+,Seven Brides for Seven Brothers,Seven Brides for Seven Brothers,False
+,1955,Richard III,True
+,Bad Day at Black Rock,Bad Day at Black Rock,False
+,Carmen Jones,Carmen Jones,False
+,The Colditz Story,The Colditz Story,False
+,The Dam Busters,The Dam Busters,False
+,East of Eden,East of Eden,False
+,The Ladykillers,The Ladykillers,False
+,Marty †,Marty,False
+,The Night My Number Came Up,The Night My Number Came Up,False
+,The Prisoner,The Prisoner,False
+,"Seven Samurai (七人の侍, Shichinin no Samurai)",Seven Samurai,False
+,Simba,Simba,False
+,La Strada,La Strada,False
+,Summertime,Summertime,False
+,1956,Gervaise,True
+,Friends for Life (Amici per la pelle),Friends for Life,False
+,Baby Doll,Baby Doll,False
+,The Battle of the River Plate,The Battle of the River Plate,False
+,The Unfrocked One (Le Défroqué),The Unfrocked One,False
+,Guys and Dolls,Guys and Dolls,False
+,The Killing,The Killing,False
+,The Man Who Never Was,The Man Who Never Was,False
+,The Man with the Golden Arm,The Man with the Golden Arm,False
+,Picnic,Picnic,False
+,"The Grasshopper (Попрыгунья, Poprygunya)",The Grasshopper,False
+,Reach for the Sky,Reach for the Sky,False
+,Rebel Without a Cause,Rebel Without a Cause,False
+,Shadow (Cień),Shadow,False
+,Smiles of a Summer Night (Sommarnattens leende),Smiles of a Summer Night,False
+,A Town Like Alice,A Town Like Alice,False
+,The Trouble with Harry,The Trouble with Harry,False
+,War and Peace,War and Peace,False
+,Yield to the Night,Yield to the Night,False
+,1957,The Bridge on the River Kwai,True
+,12 Angry Men,12 Angry Men,False
+,3:10 to Yuma,3:10 to Yuma,False
+,The Bachelor Party,The Bachelor Party,False
+,He Who Must Die (Celui qui doit mourir),He Who Must Die,False
+,Edge of the City,Edge of the City,False
+,"Heaven Knows, Mr. Allison","Heaven Knows, Mr. Allison",False
+,"Pather Panchali (পথের পাঁচালী, Pôther Pãchali)",Pather Panchali,False
+,Paths of Glory,Paths of Glory,False
+,Gates of Paris (Porte des Lilas ),Gates of Paris,False
+,The Prince and the Showgirl,The Prince and the Showgirl,False
+,The Shiralee,The Shiralee,False
+,That Night!,That Night!,False
+,The Tin Star,The Tin Star,False
+,A Man Escaped (Un condamné à mort s'est échappé),A Man Escaped,False
+,Windom's Way,Windom's Way,False
+,1958,Room at the Top,True
+,"Aparajito (অপরাজিত, Ôporajito)",Aparajito,False
+,Cat on a Hot Tin Roof,Cat on a Hot Tin Roof,False
+,The Defiant Ones,The Defiant Ones,False
+,Ice Cold in Alex,Ice Cold in Alex,False
+,Indiscreet,Indiscreet,False
+,"The Cranes Are Flying (Летят журавли, Letyat zhuravli)",The Cranes Are Flying,False
+,No Down Payment,No Down Payment,False
+,Nights of Cabiria (Le notti di Cabiria),Nights of Cabiria,False
+,Orders to Kill,Orders to Kill,False
+,Sea of Sand,Sea of Sand,False
+,The Sheepman,The Sheepman,False
+,Wild Strawberries (Smultronstället),Wild Strawberries,False
+,The Young Lions,The Young Lions,False
+,1959,Ben-Hur,True
+,Anatomy of a Murder,Anatomy of a Murder,False
+,The Magician (Ansiktet),The Magician,False
+,The Big Country,The Big Country,False
+,Compulsion,Compulsion,False
+,Gigi,Gigi,False
+,Look Back in Anger,Look Back in Anger,False
+,Maigret Sets a Trap (Maigret tend un piège),Maigret Sets a Trap,False
+,North West Frontier,North West Frontier,False
+,The Nun's Story,The Nun's Story,False
+,Ashes and Diamonds (Popiół i diament),Ashes and Diamonds,False
+,Sapphire,Sapphire,False
+,Some Like It Hot,Some Like It Hot,False
+,Tiger Bay,Tiger Bay,False
+,Yesterday's Enemy,Yesterday's Enemy,False
+,1960,The Apartment,True
+,The 400 Blows (Les quatre cents coups),The 400 Blows,False
+,The Angry Silence,The Angry Silence,False
+,The Adventure (L'avventura),The Adventure,False
+,La Dolce Vita,La Dolce Vita,False
+,Elmer Gantry,Elmer Gantry,False
+,"Hiroshima mon amour (二十四時間の情事, Nijūyojikan'nojōji)",Hiroshima mon amour,False
+,Inherit the Wind,Inherit the Wind,False
+,Let's Make Love,Let's Make Love,False
+,Black Orpheus (Orfeu Negro),Black Orpheus,False
+,"Never on Sunday (Ποτέ την Κυριακή, Poté tin Kyriakí)",Never on Sunday,False
+,Saturday Night and Sunday Morning,Saturday Night and Sunday Morning,False
+,Shadows,Shadows,False
+,Spartacus,Spartacus,False
+,The Testament of Orpheus (Le testament d'Orphée),The Testament of Orpheus,False
+,The Trials of Oscar Wilde,The Trials of Oscar Wilde,False
+,Tunes of Glory,Tunes of Glory,False
+,1961,Ballad of a Soldier,True
+,The Hustler,The Hustler,True
+,The World of Apu,The World of Apu,False
+,The Innocents,The Innocents,False
+,Judgment at Nuremberg,Judgment at Nuremberg,False
+,The Long and the Short and the Tall,The Long and the Short and the Tall,False
+,Rocco and His Brothers (Rocco e i suoi fratelli),Rocco and His Brothers,False
+,The Sundowners,The Sundowners,False
+,A Taste of Honey,A Taste of Honey,False
+,The Hole (Le Trou; US: The Night Watch),The Hole,False
+,Whistle Down the Wind,Whistle Down the Wind,False
+,1962,Lawrence of Arabia,True
+,Last Year at Marienbad (L'Année dernière à Marienbad),Last Year at Marienbad,False
+,Billy Budd,Billy Budd,False
+,The Elusive Corporal (Le Caporal épinglé),The Elusive Corporal,False
+,"The Lady with the Dog ( Дама с собачкой, Dama s sobachkoy)",The Lady with the Dog,False
+,"The Naked Island (裸の島, Hadaka no Shima)",The Naked Island,False
+,Jules and Jim (Jules et Jim),Jules and Jim,False
+,A Kind of Loving,A Kind of Loving,False
+,The L-Shaped Room,The L-Shaped Room,False
+,Lola,Lola,False
+,The Manchurian Candidate,The Manchurian Candidate,False
+,The Miracle Worker,The Miracle Worker,False
+,Only Two Can Play,Only Two Can Play,False
+,Phaedra (Φαίδρα),Phaedra,False
+,Through a Glass Darkly (Såsom i en spegel),Through a Glass Darkly,False
+,Thou Shalt Not Kill (Tu ne tueras point),Thou Shalt Not Kill,False
+,The Long Absence (Une aussi longue absence),The Long Absence,False
+,West Side Story †,West Side Story,False
+,1963,Tom Jones,True
+,8½ (Otto e mezzo),8½,False
+,Billy Liar,Billy Liar,False
+,David and Lisa,David and Lisa,False
+,Days of Wine and Roses,Days of Wine and Roses,False
+,Divorce Italian Style (Divorzio all'italiana),Divorce Italian Style,False
+,Hud,Hud,False
+,Knife in the Water (Nóż w wodzie),Knife in the Water,False
+,The Four Days of Naples (Le quattro giornate di Napoli),The Four Days of Naples,False
+,The Servant,The Servant,False
+,This Sporting Life,This Sporting Life,False
+,To Kill a Mockingbird,To Kill a Mockingbird,False
+,1964,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,True
+,Becket,Becket,False
+,The Pumpkin Eater,The Pumpkin Eater,False
+,The Train,The Train,False
+,1965,My Fair Lady,True
+,"Hamlet (Гамлет, Gamlet)",Hamlet,False
+,The Hill,The Hill,False
+,The Knack ...and How to Get It,The Knack ...and How to Get It,False
+,"Zorba the Greek (Αλέξης Ζορμπάς, Alexis Zorbas)",Zorba the Greek,False
+,1966,Who's Afraid of Virginia Woolf?,True
+,Doctor Zhivago,Doctor Zhivago,False
+,Morgan – A Suitable Case for Treatment,Morgan – A Suitable Case for Treatment,False
+,The Spy Who Came in From The Cold,The Spy Who Came in From The Cold,False
+,1967,A Man For All Seasons,True
+,Bonnie and Clyde,Bonnie and Clyde,False
+,In the Heat of the Night †,In the Heat of the Night,False
+,A Man and a Woman (Un homme et une femme),A Man and a Woman,False
+,1968,The Graduate,True
+,2001: A Space Odyssey,2001: A Space Odyssey,False
+,Oliver! †,Oliver!,False
+,Closely Observed Trains (Ostře sledované vlaky),Closely Observed Trains,False
+,1969,Midnight Cowboy,True
+,Oh! What a Lovely War,Oh! What a Lovely War,False
+,Women in Love,Women in Love,False
+,Z,Z,False
+,1970,Butch Cassidy and the Sundance Kid,True
+,Kes,Kes,False
+,M*A*S*H,M*A*S*H,False
+,Ryan's Daughter,Ryan's Daughter,False
+,1971,Sunday Bloody Sunday,True
+,The Go-Between,The Go-Between,False
+,Death in Venice (Morte a Venezia),Death in Venice,False
+,Taking Off,Taking Off,False
+,1972,Cabaret,True
+,A Clockwork Orange,A Clockwork Orange,False
+,The French Connection †,The French Connection,False
+,The Last Picture Show,The Last Picture Show,False
+,1973,Day for Night,True
+,The Day of the Jackal,The Day of the Jackal,False
+,The Discreet Charm of the Bourgeoisie (Le Charme discret de la bourgeoisie),The Discreet Charm of the Bourgeoisie,False
+,Don't Look Now,Don't Look Now,False
+,1974,"Lacombe, Lucien",True
+,Chinatown,Chinatown,False
+,The Last Detail,The Last Detail,False
+,Murder on the Orient Express,Murder on the Orient Express,False
+,1975,Alice Doesn't Live Here Anymore,True
+,Barry Lyndon,Barry Lyndon,False
+,Dog Day Afternoon,Dog Day Afternoon,False
+,Jaws,Jaws,False
+,1976,One Flew Over the Cuckoo's Nest,True
+,All the President's Men,All the President's Men,False
+,Bugsy Malone,Bugsy Malone,False
+,Taxi Driver,Taxi Driver,False
+,1977,Annie Hall,True
+,A Bridge Too Far,A Bridge Too Far,False
+,Network,Network,False
+,Rocky †,Rocky,False
+,1978,Julia,True
+,Close Encounters of the Third Kind,Close Encounters of the Third Kind,False
+,Midnight Express,Midnight Express,False
+,Star Wars,Star Wars,False
+,1979,Manhattan,True
+,Apocalypse Now,Apocalypse Now,False
+,The China Syndrome,The China Syndrome,False
+,The Deer Hunter †,The Deer Hunter,False
+,1980,The Elephant Man,True
+,Being There,Being There,False
+,"Kagemusha (影武者, Kagemusha)",Kagemusha,False
+,Kramer vs. Kramer †,Kramer vs. Kramer,False
+,1981,Chariots of Fire,True
+,Atlantic City,Atlantic City,False
+,The French Lieutenant's Woman,The French Lieutenant's Woman,False
+,Gregory's Girl,Gregory's Girl,False
+,Raiders of the Lost Ark,Raiders of the Lost Ark,False
+,1982,Gandhi,True
+,E.T. the Extra-Terrestrial,E.T. the Extra-Terrestrial,False
+,Missing,Missing,False
+,On Golden Pond,On Golden Pond,False
+,1983,Educating Rita,True
+,Heat and Dust,Heat and Dust,False
+,Local Hero,Local Hero,False
+,Tootsie,Tootsie,False
+,1984,The Killing Fields,True
+,The Dresser,The Dresser,False
+,"Paris, Texas","Paris, Texas",False
+,A Private Function,A Private Function,False
+,1985,The Purple Rose of Cairo,True
+,Amadeus †,Amadeus,False
+,Back to the Future,Back to the Future,False
+,A Passage to India,A Passage to India,False
+,Witness,Witness,False
+,1986,A Room with a View,True
+,Hannah and Her Sisters,Hannah and Her Sisters,False
+,The Mission,The Mission,False
+,Mona Lisa,Mona Lisa,False
+,1987,Jean de Florette,True
+,Cry Freedom,Cry Freedom,False
+,Hope and Glory,Hope and Glory,False
+,Radio Days,Radio Days,False
+,1988,The Last Emperor,True
+,Au revoir les enfants,Au revoir les enfants,False
+,Babette's Feast,Babette's Feast,False
+,A Fish Called Wanda,A Fish Called Wanda,False
+,1989,Dead Poets Society,True
+,My Left Foot,My Left Foot,False
+,Shirley Valentine,Shirley Valentine,False
+,When Harry Met Sally...,When Harry Met Sally...,False
+,1990,Goodfellas,True
+,Crimes and Misdemeanors,Crimes and Misdemeanors,False
+,Driving Miss Daisy †,Driving Miss Daisy,False
+,Pretty Woman,Pretty Woman,False
+,1991,The Commitments,True
+,Dances with Wolves †,Dances with Wolves,False
+,The Silence of the Lambs †,The Silence of the Lambs,False
+,Thelma & Louise,Thelma & Louise,False
+,1992,Howards End,True
+,The Crying Game,The Crying Game,False
+,The Player,The Player,False
+,Strictly Ballroom,Strictly Ballroom,False
+,Unforgiven †,Unforgiven,False
+,1993,Schindler's List,True
+,The Piano,The Piano,False
+,The Remains of the Day,The Remains of the Day,False
+,Shadowlands,Shadowlands,False
+,1994,Four Weddings and a Funeral,True
+,Forrest Gump †,Forrest Gump,False
+,Pulp Fiction,Pulp Fiction,False
+,Quiz Show,Quiz Show,False
+,1995,Sense and Sensibility,True
+,Babe,Babe,False
+,The Madness of King George,The Madness of King George,False
+,The Usual Suspects,The Usual Suspects,False
+,1996,The English Patient,True
+,Fargo,Fargo,False
+,Secrets & Lies,Secrets & Lies,False
+,Shine,Shine,False
+,1997,The Full Monty,True
+,L.A. Confidential,L.A. Confidential,False
+,Mrs Brown,Mrs Brown,False
+,Titanic †,Titanic,False
+,1998,Shakespeare in Love,True
+,Elizabeth,Elizabeth,False
+,Saving Private Ryan,Saving Private Ryan,False
+,The Truman Show,The Truman Show,False
+,1999,American Beauty,True
+,East is East,East is East,False
+,The End of the Affair,The End of the Affair,False
+,The Sixth Sense,The Sixth Sense,False
+,The Talented Mr. Ripley,The Talented Mr. Ripley,False
+,2000,Gladiator,True
+,Almost Famous,Almost Famous,False
+,Billy Elliot,Billy Elliot,False
+,"Crouching Tiger, Hidden Dragon (臥虎藏龍, Wò hǔ cáng lóng)","Crouching Tiger, Hidden Dragon",False
+,Erin Brockovich,Erin Brockovich,False
+,2001,The Lord of the Rings: The Fellowship of the Ring,True
+,Amélie,Amélie,False
+,A Beautiful Mind †,A Beautiful Mind,False
+,Moulin Rouge!,Moulin Rouge!,False
+,Shrek,Shrek,False
+,2002,The Pianist,True
+,Chicago †,Chicago,False
+,Gangs of New York,Gangs of New York,False
+,The Hours,The Hours,False
+,The Lord of the Rings: The Two Towers,The Lord of the Rings: The Two Towers,False
+,2003,The Lord of the Rings: The Return of the King,True
+,Big Fish,Big Fish,False
+,Cold Mountain,Cold Mountain,False
+,Lost in Translation,Lost in Translation,False
+,Master and Commander: The Far Side of the World,Master and Commander: The Far Side of the World,False
+,2004,The Aviator,True
+,Eternal Sunshine of the Spotless Mind,Eternal Sunshine of the Spotless Mind,False
+,Finding Neverland,Finding Neverland,False
+,The Motorcycle Diaries (Diarios de motocicleta),The Motorcycle Diaries,False
+,Vera Drake,Vera Drake,False
+,2005,Brokeback Mountain,True
+,Capote,Capote,False
+,The Constant Gardener,The Constant Gardener,False
+,Crash †,Crash,False
+,"Good Night, and Good Luck","Good Night, and Good Luck",False
+,2006,The Queen,True
+,Babel,Babel,False
+,The Departed †,The Departed,False
+,The Last King of Scotland,The Last King of Scotland,False
+,Little Miss Sunshine,Little Miss Sunshine,False
+,2007,Atonement,True
+,American Gangster,American Gangster,False
+,The Lives of Others (Das Leben der Anderen),The Lives of Others (Das Leben der Anderen),False
+,No Country for Old Men †,No Country for Old Men,False
+,There Will Be Blood,There Will Be Blood,False
+,2008,Slumdog Millionaire,True
+,The Curious Case of Benjamin Button,The Curious Case of Benjamin Button,False
+,Frost/Nixon,Frost/Nixon,False
+,Milk,Milk,False
+,The Reader,The Reader,False
+,2009,The Hurt Locker,True
+,Avatar,Avatar,False
+,An Education,An Education,False
+,Precious,Precious,False
+,Up in the Air,Up in the Air,False
+,2010,The King's Speech,True
+,Black Swan,Black Swan,False
+,Inception,Inception,False
+,The Social Network,The Social Network,False
+,True Grit,True Grit,False
+,2011,The Artist,True
+,The Descendants,The Descendants,False
+,Drive,Drive,False
+,The Help,The Help,False
+,Tinker Tailor Soldier Spy,Tinker Tailor Soldier Spy,False
+,2012,Argo,True
+,Les Misérables,Les Misérables,False
+,Life of Pi,Life of Pi,False
+,Lincoln,Lincoln,False
+,Zero Dark Thirty,Zero Dark Thirty,False
+,2013,12 Years a Slave,True
+,American Hustle,American Hustle,False
+,Captain Phillips,Captain Phillips,False
+,Gravity,Gravity,False
+,Philomena,Philomena,False
+,2014,Boyhood,True
+,Birdman or (The Unexpected Virtue of Ignorance) †,Birdman or (The Unexpected Virtue of Ignorance),False
+,The Grand Budapest Hotel,The Grand Budapest Hotel,False
+,The Imitation Game,The Imitation Game,False
+,The Theory of Everything,The Theory of Everything,False
+,2015,The Revenant,True
+,The Big Short,The Big Short,False
+,Bridge of Spies,Bridge of Spies,False
+,Carol,Carol,False
+,Spotlight †,Spotlight,False
+,2016,La La Land,True
+,Arrival,Arrival,False
+,"I, Daniel Blake","I, Daniel Blake",False
+,Manchester by the Sea,Manchester by the Sea,False
+,Moonlight †,Moonlight,False
+,2017,"Three Billboards Outside Ebbing, Missouri",True
+,Call Me by Your Name,Call Me by Your Name,False
+,Darkest Hour,Darkest Hour,False
+,Dunkirk,Dunkirk,False
+,The Shape of Water †,The Shape of Water,False
+,2018,Roma,True
+,BlacKkKlansman,BlacKkKlansman,False
+,The Favourite,The Favourite,False
+,Green Book †,Green Book,False
+,A Star is Born,A Star is Born,False
+,2019,1917,True
+,The Irishman,The Irishman,False
+,Joker,Joker,False
+,Once Upon a Time in Hollywood,Once Upon a Time in Hollywood,False
+,"Parasite  (기생충, Gisaengchung) †",Parasite,False
+,2020,Nomadland,True
+,The Father,The Father,False
+,The Mauritanian,The Mauritanian,False
+,Promising Young Woman,Promising Young Woman,False
+,The Trial of the Chicago 7,The Trial of the Chicago 7,False
+,2021,The Power of the Dog,True
+,Belfast,Belfast,False
+,Don't Look Up,Don't Look Up,False
+,Dune,Dune,False
+,Licorice Pizza,Licorice Pizza,False
+,2022,All Quiet on the Western Front (Im Westen nichts Neues),True
+,The Banshees of Inisherin,The Banshees of Inisherin,False
+,Elvis,Elvis,False
+,Everything Everywhere All at Once †,Everything Everywhere All at Once,False
+,Tár,Tár,False
+,2023,Oppenheimer,True
+,Anatomy of a Fall (Anatomie d'une chute),Anatomy of a Fall (Anatomie d'une chute),False
+,The Holdovers,The Holdovers,False
+,Killers of the Flower Moon,Killers of the Flower Moon,False
+,Poor Things,Poor Things,False
+,2024,Conclave,True
+,Anora †,Anora,False
+,The Brutalist,The Brutalist,False
+,A Complete Unknown,A Complete Unknown,False
+,Emilia Pérez,Emilia Pérez,False
+,2025,One Battle After Another,True
+,Hamnet,Hamnet,False
+,Marty Supreme,Marty Supreme,False
+,Sentimental Value,Sentimental Value,False
+,Sinners,Sinners,False

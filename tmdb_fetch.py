@@ -3,6 +3,8 @@ import sys
 import json
 import time
 
+import pandas as pd
+
 # --------------------------
 # CONFIGURATION
 # --------------------------
@@ -42,6 +44,40 @@ def get_movie_details(tmdb_id):
         print(json.dumps({"error": f"Error fetching details for ID {tmdb_id}"}))
         return None
     return response.json()
+
+def extract_cast_and_crew(details, movie_id):
+    """
+    Extracts cast and crew tables from TMDb JSON response for a single movie.
+    
+    Args:
+        details (dict): Full TMDb movie details JSON (including credits).
+        movie_id (int): The TMDb movie ID.
+    
+    Returns:
+        cast_df (pd.DataFrame), crew_df (pd.DataFrame)
+    """
+    cast_keys = ['id', 'name', 'popularity', 'credit_id', 'order']
+    crew_keys = ['id', 'name', 'popularity', 'credit_id', 'order', 'department', 'job']
+
+    # --- Extract Cast ---
+    cast_data = []
+    for person in details.get('credits', {}).get('cast', []):
+        record = {key: person.get(key) for key in cast_keys}
+        record['movie_id'] = movie_id
+        cast_data.append(record)
+
+    cast_df = pd.DataFrame(cast_data, columns=cast_keys + ['movie_id'])
+
+    # --- Extract Crew ---
+    crew_data = []
+    for person in details.get('credits', {}).get('crew', []):
+        record = {key: person.get(key) for key in crew_keys}
+        record['movie_id'] = movie_id
+        crew_data.append(record)
+
+    crew_df = pd.DataFrame(crew_data, columns=crew_keys + ['movie_id'])
+
+    return cast_df, crew_df
 
 # --------------------------
 # MAIN SCRIPT

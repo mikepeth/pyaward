@@ -1,0 +1,496 @@
+Year,Nominee,Movie,Winner
+,Joseph L. Mankiewicz,A Letter to Three Wives,True
+,Howard Hawks,Red River,False
+,Anatole Litvak,The Snake Pit,False
+,Fred Zinnemann,The Search,False
+,Robert Rossen,All the King's Men,True
+,Carol Reed,The Third Man,False
+,Mark Robson,Champion,False
+,Alfred L. Werker,Lost Boundaries,False
+,Joseph L. Mankiewicz,All About Eve,True
+,John Huston,The Asphalt Jungle,False
+,Vincente Minnelli,Father's Little Dividend,False
+,Billy Wilder,Sunset Boulevard,False
+,George Stevens,A Place in the Sun,True
+,László Benedek,Death of a Salesman,False
+,Michael Gordon,Cyrano de Bergerac,False
+,Alfred Hitchcock,Strangers on a Train,False
+,Elia Kazan,A Streetcar Named Desire,False
+,Henry King,David and Bathsheba,False
+,Mervyn LeRoy,Quo Vadis,False
+,Anatole Litvak,Decision Before Dawn,False
+,Vincente Minnelli,An American in Paris,False
+,George Sidney,Show Boat,False
+,Richard Thorpe,The Great Caruso,False
+,William Wyler,Detective Story,False
+,John Ford,The Quiet Man,True
+,Charles Crichton,The Lavender Hill Mob,False
+,George Cukor,Pat and Mike,False
+,Michael Curtiz,I'll See You in My Dreams,False
+,Cecil B. DeMille,The Greatest Show on Earth,False
+,Hugo Fregonese,My Six Convicts,False
+,Howard Hawks,The Big Sky,False
+,Elia Kazan,Viva Zapata!,False
+,Gene Kelly and Stanley Donen,Singin' in the Rain,False
+,Henry King,The Snows of Kilimanjaro,False
+,Akira Kurosawa,Rashomon,False
+,Albert Lewin,Pandora and the Flying Dutchman,False
+,Joseph L. Mankiewicz,5 Fingers,False
+,Vincente Minnelli,The Bad and the Beautiful,False
+,George Sidney,Scaramouche,False
+,Richard Thorpe,Ivanhoe,False
+,Charles Vidor,Hans Christian Andersen,False
+,Fred Zinnemann,High Noon,False
+,Fred Zinnemann,From Here to Eternity,True
+,Melvin Frank and Norman Panama,Above and Beyond,False
+,Henry Koster,The Robe,False
+,Walter Lang,Call Me Madam,False
+,Joseph L. Mankiewicz,Julius Caesar,False
+,Daniel Mann,"Come Back, Little Sheba",False
+,Jean Negulesco,Titanic,False
+,George Sidney,Young Bess,False
+,George Stevens,Shane,False
+,Charles Walters,Lili,False
+,Billy Wilder,Stalag 17,False
+,William Wyler,Roman Holiday,False
+,Elia Kazan,On the Waterfront,True
+,George Cukor,A Star Is Born,False
+,Edward Dmytryk,The Caine Mutiny,False
+,Stanley Donen,Seven Brides for Seven Brothers,False
+,Melvin Frank and Norman Panama,Knock on Wood,False
+,Samuel Fuller,Hell and High Water,False
+,Alfred Hitchcock,Rear Window,False
+,Henry King,King of the Khyber Rifles,False
+,Anthony Mann,The Glenn Miller Story,False
+,Jean Negulesco,Three Coins in the Fountain,False
+,George Seaton,The Country Girl,False
+,Don Siegel,Riot in Cell Block 11,False
+,William A. Wellman,The High and the Mighty,False
+,Robert Wise,Executive Suite,False
+,Billy Wilder,Sabrina,False
+,Delbert Mann,Marty,True
+,Richard Brooks,Blackboard Jungle,False
+,John Ford,The Long Gray Line,False
+,Elia Kazan,East of Eden,False
+,Henry Koster,A Man Called Peter,False
+,Joshua Logan,Picnic,False
+,Daniel Mann,The Rose Tattoo,False
+,Mark Robson,The Bridges at Toko-Ri,False
+,John Sturges,Bad Day at Black Rock,False
+,Charles Vidor,Love Me or Leave Me,False
+,Billy Wilder,The Seven Year Itch,False
+,George Stevens,Giant,True
+,Michael Anderson,Around the World in 80 Days,False
+,John Huston,Moby Dick,False
+,Joshua Logan,Bus Stop,False
+,Daniel Mann,Teahouse of the August Moon,False
+,King Vidor,War and Peace,False
+,Robert Wise,Somebody Up There Likes Me,False
+,William Wyler,Friendly Persuasion,False
+,David Lean,The Bridge on the River Kwai,True
+,George Cukor,Les Girls,False
+,Stanley Donen,Funny Face,False
+,José Ferrer,The Great Man,False
+,John Huston,"Heaven Knows, Mr. Allison",False
+,Elia Kazan,A Face in the Crowd,False
+,Stanley Kramer,The Pride and the Passion,False
+,Anthony Mann,Men in War,False
+,Leo McCarey,An Affair to Remember,False
+,Robert Mulligan,Fear Strikes Out,False
+,John Sturges,Gunfight at the O.K. Corral,False
+,Fred Zinnemann,A Hatful of Rain,False
+,Vincente Minnelli,Gigi,True
+,George Abbott and Stanley Donen,Damn Yankees,False
+,Richard Brooks,The Brothers Karamazov,False
+,Delmer Daves,Cowboy,False
+,Edward Dmytryk,The Young Lions,False
+,Richard Fleischer,The Vikings,False
+,Alfred Hitchcock,Vertigo,False
+,Martin Ritt,"The Long, Hot Summer",False
+,George Seaton,Teacher's Pet,False
+,William Wyler,The Big Country,False
+,William Wyler,Ben-Hur,True
+,Charles Barton,The Shaggy Dog,False
+,Frank Capra,A Hole in the Head,False
+,Richard Fleischer,Compulsion,False
+,John Ford,The Horse Soldiers,False
+,Howard Hawks,Rio Bravo,False
+,Alfred Hitchcock,North by Northwest,False
+,Leo McCarey,"Rally Round the Flag, Boys!",False
+,Otto Preminger,Anatomy of a Murder,False
+,Douglas Sirk,Imitation of Life,False
+,George Stevens,The Diary of Anne Frank,False
+,Billy Wilder,Some Like It Hot,False
+,Fred Zinnemann,The Nun's Story,False
+,Billy Wilder,The Apartment,True
+,Richard Brooks,Elmer Gantry,False
+,Vincent J. Donehue,Sunrise at Campobello,False
+,Lewis Gilbert,Sink the Bismarck!,False
+,Walter Lang,Can-Can,False
+,Delbert Mann,The Dark at the Top of the Stairs,False
+,Carol Reed,Our Man in Havana,False
+,Alain Resnais,Hiroshima mon amour,False
+,Charles Walters,Please Don't Eat the Daisies,False
+,Alfred Hitchcock,Psycho,False
+,Robert Wise and Jerome Robbins,West Side Story,True
+,Marlon Brando,One-Eyed Jacks,False
+,Frank Capra,Pocketful of Miracles,False
+,Jack Clayton,The Innocents,False
+,Peter Glenville,Summer and Smoke,False
+,John Huston,The Misfits,False
+,Elia Kazan,Splendor in the Grass,False
+,Henry Koster,Flower Drum Song,False
+,Stanley Kramer,Judgment at Nuremberg,False
+,Philip Leacock,Hand in Hand,False
+,Mervyn LeRoy,A Majority of One,False
+,Joshua Logan,Fanny,False
+,Anthony Mann,El Cid,False
+,Robert Mulligan,The Great Impostor,False
+,Daniel Petrie,A Raisin in the Sun,False
+,Robert Stevenson,The Absent-Minded Professor,False
+,Peter Ustinov,Romanoff and Juliet,False
+,William Wyler,The Children's Hour,False
+,David Lean,Lawrence of Arabia,True
+,Robert Aldrich,What Ever Happened to Baby Jane?,False
+,Morton DaCosta,The Music Man,False
+,Stanley Kubrick,Lolita,False
+,Lewis Milestone,Mutiny on the Bounty,False
+,Robert Mulligan,To Kill a Mockingbird,False
+,Ralph Nelson,Requiem for a Heavyweight,False
+,Arthur Penn,The Miracle Worker,False
+,Tony Richardson,A Taste of Honey,False
+,Tony Richardson,Tom Jones,True
+,Federico Fellini,8½,False
+,Elia Kazan,America America,False
+,Ralph Nelson,Lilies of the Field,False
+,Martin Ritt,Hud,False
+,George Cukor,My Fair Lady,True
+,Peter Glenville,Becket,False
+,John Huston,The Night of the Iguana,False
+,Stanley Kubrick,Dr. Strangelove,False
+,Robert Stevenson,Mary Poppins,False
+,Robert Wise,The Sound of Music,True
+,Sidney J. Furie,The Ipcress File,False
+,Sidney Lumet,The Pawnbroker,False
+,John Schlesinger,Darling,False
+,Elliot Silverstein,Cat Ballou,False
+,Fred Zinnemann,A Man for All Seasons,True
+,Richard Brooks,The Professionals,False
+,John Frankenheimer,Grand Prix,False
+,Lewis Gilbert,Alfie,False
+,James Hill,Born Free,False
+,Norman Jewison,"The Russians Are Coming, the Russians Are Coming",False
+,Claude Lelouch,A Man and a Woman,False
+,Silvio Narizzano,Georgy Girl,False
+,Mike Nichols,Who's Afraid of Virginia Woolf?,False
+,Robert Wise,The Sand Pebbles,False
+,Mike Nichols,The Graduate,True
+,Robert Aldrich,The Dirty Dozen,False
+,Richard Brooks,In Cold Blood,False
+,James Clavell,"To Sir, with Love",False
+,Stanley Donen,Two for the Road,False
+,Norman Jewison,In the Heat of the Night,False
+,Stanley Kramer,Guess Who's Coming to Dinner,False
+,Arthur Penn,Bonnie and Clyde,False
+,Stuart Rosenberg,Cool Hand Luke,False
+,Joseph Strick,Ulysses,False
+,Anthony Harvey,The Lion in Winter,True
+,Paul Almond,Isabel,False
+,Stanley Kubrick,2001: A Space Odyssey,False
+,Jiří Menzel,Closely Watched Trains,False
+,Paul Newman,"Rachel, Rachel",False
+,Roman Polanski,Rosemary's Baby,False
+,Carol Reed,Oliver!,False
+,Gene Saks,The Odd Couple,False
+,William Wyler,Funny Girl,False
+,Franco Zeffirelli,Romeo and Juliet,False
+,John Schlesinger,Midnight Cowboy,True
+,Richard Attenborough,Oh! What a Lovely War,False
+,Costa-Gavras,Z,False
+,George Roy Hill,Butch Cassidy and the Sundance Kid,False
+,Dennis Hopper,Easy Rider,False
+,Gene Kelly,"Hello, Dolly!",False
+,Sam Peckinpah,The Wild Bunch,False
+,Larry Peerce,"Goodbye, Columbus",False
+,Sydney Pollack,"They Shoot Horses, Don't They?",False
+,Haskell Wexler,Medium Cool,False
+,Franklin J. Schaffner,Patton,True
+,Robert Altman,M*A*S*H,False
+,Arthur Hiller,Love Story,False
+,David Lean,Ryan's Daughter,False
+,Bob Rafelson,Five Easy Pieces,False
+,William Friedkin,The French Connection,True
+,Peter Bogdanovich,The Last Picture Show,False
+,Stanley Kubrick,A Clockwork Orange,False
+,Robert Mulligan,Summer of '42,False
+,John Schlesinger,Sunday Bloody Sunday,False
+,Francis Ford Coppola,The Godfather,True
+,John Boorman,Deliverance,False
+,Bob Fosse,Cabaret,False
+,George Roy Hill,Slaughterhouse-Five,False
+,Martin Ritt,Sounder,False
+,George Roy Hill,The Sting,True
+,Bernardo Bertolucci,Last Tango in Paris,False
+,William Friedkin,The Exorcist,False
+,George Lucas,American Graffiti,False
+,Sidney Lumet,Serpico,False
+,Francis Ford Coppola,The Godfather Part II,True
+,Francis Ford Coppola,The Conversation,False
+,Bob Fosse,Lenny,False
+,Sidney Lumet,Murder on the Orient Express,False
+,Roman Polanski,Chinatown,False
+,Miloš Forman,One Flew Over the Cuckoo's Nest,True
+,Robert Altman,Nashville,False
+,Stanley Kubrick,Barry Lyndon,False
+,Sidney Lumet,Dog Day Afternoon,False
+,Steven Spielberg,Jaws,False
+,John G. Avildsen,Rocky,True
+,Sidney Lumet,Network,False
+,Alan J. Pakula,All the President's Men,False
+,Martin Scorsese,Taxi Driver,False
+,Lina Wertmüller,Seven Beauties,False
+,Woody Allen,Annie Hall,True
+,George Lucas,Star Wars,False
+,Herbert Ross,The Turning Point,False
+,Steven Spielberg,Close Encounters of the Third Kind,False
+,Fred Zinnemann,Julia,False
+,Michael Cimino,The Deer Hunter,True
+,Hal Ashby,Coming Home,False
+,Warren Beatty and Buck Henry,Heaven Can Wait,False
+,Paul Mazursky,An Unmarried Woman,False
+,Alan Parker,Midnight Express,False
+,Robert Benton,Kramer vs. Kramer,True
+,Woody Allen,Manhattan,False
+,James Bridges,The China Syndrome,False
+,Francis Ford Coppola,Apocalypse Now,False
+,Peter Yates,Breaking Away,False
+,Robert Redford,Ordinary People,True
+,Michael Apted,Coal Miner's Daughter,False
+,David Lynch,The Elephant Man,False
+,Richard Rush,The Stunt Man,False
+,Martin Scorsese,Raging Bull,False
+,Warren Beatty,Reds,True
+,Hugh Hudson,Chariots of Fire,False
+,Louis Malle,Atlantic City,False
+,Mark Rydell,On Golden Pond,False
+,Steven Spielberg,Raiders of the Lost Ark,False
+,Richard Attenborough,Gandhi,True
+,Taylor Hackford,An Officer and a Gentleman,False
+,Wolfgang Petersen,Das Boot,False
+,Sydney Pollack,Tootsie,False
+,Steven Spielberg,E.T. the Extra-Terrestrial,False
+,James L. Brooks,Terms of Endearment,True
+,Bruce Beresford,Tender Mercies,False
+,Ingmar Bergman,Fanny and Alexander,False
+,Lawrence Kasdan,The Big Chill,False
+,Philip Kaufman,The Right Stuff,False
+,Miloš Forman,Amadeus,True
+,Robert Benton,Places in the Heart,False
+,Norman Jewison,A Soldier's Story,False
+,Roland Joffé,The Killing Fields,False
+,David Lean,A Passage to India,False
+,Steven Spielberg,The Color Purple,True
+,Ron Howard,Cocoon,False
+,John Huston,Prizzi's Honor,False
+,Sydney Pollack,Out of Africa,False
+,Peter Weir,Witness,False
+,Oliver Stone,Platoon,True
+,Woody Allen,Hannah and Her Sisters,False
+,Randa Haines,Children of a Lesser God,False
+,James Ivory,A Room with a View,False
+,Rob Reiner,Stand by Me,False
+,Bernardo Bertolucci,The Last Emperor,True
+,James L. Brooks,Broadcast News,False
+,Lasse Hallström,My Life as a Dog,False
+,Adrian Lyne,Fatal Attraction,False
+,Steven Spielberg,Empire of the Sun,False
+,Barry Levinson,Rain Man,True
+,Charles Crichton,A Fish Called Wanda,False
+,Mike Nichols,Working Girl,False
+,Alan Parker,Mississippi Burning,False
+,Robert Zemeckis,Who Framed Roger Rabbit,False
+,Oliver Stone,Born on the Fourth of July,True
+,Woody Allen,Crimes and Misdemeanors,False
+,Rob Reiner,When Harry Met Sally...,False
+,Phil Alden Robinson,Field of Dreams,False
+,Peter Weir,Dead Poets Society,False
+,Kevin Costner,Dances with Wolves,True
+,Francis Ford Coppola,The Godfather Part III,False
+,Barry Levinson,Avalon,False
+,Martin Scorsese,Goodfellas,False
+,Giuseppe Tornatore,Cinema Paradiso,False
+,Jonathan Demme,The Silence of the Lambs,True
+,Barry Levinson,Bugsy,False
+,Ridley Scott,Thelma and Louise,False
+,Oliver Stone,JFK,False
+,Barbra Streisand,The Prince of Tides,False
+,Clint Eastwood,Unforgiven,True
+,Robert Altman,The Player,False
+,James Ivory,Howards End,False
+,Neil Jordan,The Crying Game,False
+,Rob Reiner,A Few Good Men,False
+,Steven Spielberg,Schindler's List,True
+,Jane Campion,The Piano,False
+,Andrew Davis,The Fugitive,False
+,James Ivory,The Remains of the Day,False
+,Martin Scorsese,The Age of Innocence,False
+,Robert Zemeckis,Forrest Gump,True
+,Frank Darabont,The Shawshank Redemption,False
+,Mike Newell,Four Weddings and a Funeral,False
+,Robert Redford,Quiz Show,False
+,Quentin Tarantino,Pulp Fiction,False
+,Ron Howard,Apollo 13,True
+,Mike Figgis,Leaving Las Vegas,False
+,Mel Gibson,Braveheart,False
+,Ang Lee,Sense and Sensibility,False
+,Michael Radford,Il Postino: The Postman,False
+,Anthony Minghella,The English Patient,True
+,Joel Coen,Fargo,False
+,Cameron Crowe,Jerry Maguire,False
+,Scott Hicks,Shine,False
+,Mike Leigh,Secrets and Lies,False
+,James Cameron,Titanic,True
+,James L. Brooks,As Good as It Gets,False
+,Curtis Hanson,L.A. Confidential,False
+,Steven Spielberg,Amistad,False
+,Gus Van Sant,Good Will Hunting,False
+,Steven Spielberg,Saving Private Ryan,True
+,Roberto Benigni,Life Is Beautiful,False
+,John Madden,Shakespeare in Love,False
+,Terrence Malick,The Thin Red Line,False
+,Peter Weir,The Truman Show,False
+,Sam Mendes,American Beauty,True
+,Frank Darabont,The Green Mile,False
+,Spike Jonze,Being John Malkovich,False
+,Michael Mann,The Insider,False
+,M. Night Shyamalan,The Sixth Sense,False
+,Ang Lee,"Crouching Tiger, Hidden Dragon",True
+,Cameron Crowe,Almost Famous,False
+,Ridley Scott,Gladiator,False
+,Steven Soderbergh,Erin Brockovich,False
+,Traffic,Traffic,False
+,Ron Howard,A Beautiful Mind,True
+,Peter Jackson,The Lord of the Rings: The Fellowship of the Ring,False
+,Baz Luhrmann,Moulin Rouge!,False
+,Christopher Nolan,Memento,False
+,Ridley Scott,Black Hawk Down,False
+,Rob Marshall,Chicago,True
+,Stephen Daldry,The Hours,False
+,Peter Jackson,The Lord of the Rings: The Two Towers,False
+,Roman Polanski,The Pianist,False
+,Martin Scorsese,Gangs of New York,False
+,Peter Jackson,The Lord of the Rings: The Return of the King,True
+,Sofia Coppola,Lost in Translation,False
+,Clint Eastwood,Mystic River,False
+,Gary Ross,Seabiscuit,False
+,Peter Weir,Master and Commander: The Far Side of the World,False
+,Clint Eastwood,Million Dollar Baby,True
+,Marc Forster,Finding Neverland,False
+,Taylor Hackford,Ray,False
+,Alexander Payne,Sideways,False
+,Martin Scorsese,The Aviator,False
+,Ang Lee,Brokeback Mountain,True
+,George Clooney,"Good Night, and Good Luck",False
+,Paul Haggis,Crash,False
+,Bennett Miller,Capote,False
+,Steven Spielberg,Munich,False
+,Martin Scorsese,The Departed,True
+,Bill Condon,Dreamgirls,False
+,Jonathan Dayton and Valerie Faris,Little Miss Sunshine,False
+,Stephen Frears,The Queen,False
+,Alejandro González Iñárritu,Babel,False
+,Joel Coen and Ethan Coen,No Country for Old Men,True
+,Paul Thomas Anderson,There Will Be Blood,False
+,Tony Gilroy,Michael Clayton,False
+,Sean Penn,Into the Wild,False
+,Julian Schnabel,The Diving Bell and the Butterfly,False
+,Danny Boyle,Slumdog Millionaire,True
+,David Fincher,The Curious Case of Benjamin Button,False
+,Ron Howard,Frost/Nixon,False
+,Christopher Nolan,The Dark Knight,False
+,Gus Van Sant,Milk,False
+,Kathryn Bigelow,The Hurt Locker,True
+,James Cameron,Avatar,False
+,Lee Daniels,Precious,False
+,Jason Reitman,Up in the Air,False
+,Quentin Tarantino,Inglourious Basterds,False
+,Tom Hooper,The King's Speech,True
+,Darren Aronofsky,Black Swan,False
+,David Fincher,The Social Network,False
+,Christopher Nolan,Inception,False
+,David O. Russell,The Fighter,False
+,Michel Hazanavicius,The Artist,True
+,Woody Allen,Midnight in Paris,False
+,David Fincher,The Girl with the Dragon Tattoo,False
+,Alexander Payne,The Descendants,False
+,Martin Scorsese,Hugo,False
+,Ben Affleck,Argo,True
+,Kathryn Bigelow,Zero Dark Thirty,False
+,Tom Hooper,Les Misérables,False
+,Ang Lee,Life of Pi,False
+,Steven Spielberg,Lincoln,False
+,Alfonso Cuarón,Gravity,True
+,Paul Greengrass,Captain Phillips,False
+,Steve McQueen,12 Years a Slave,False
+,David O. Russell,American Hustle,False
+,Martin Scorsese,The Wolf of Wall Street,False
+,Alejandro G. Iñárritu,Birdman or (The Unexpected Virtue of Ignorance),True
+,Wes Anderson,The Grand Budapest Hotel,False
+,Clint Eastwood,American Sniper,False
+,Richard Linklater,Boyhood,False
+,Morten Tyldum,The Imitation Game,False
+,Alejandro G. Iñárritu,The Revenant,True
+,Tom McCarthy,Spotlight,False
+,Adam McKay,The Big Short,False
+,George Miller,Mad Max: Fury Road,False
+,Ridley Scott,The Martian,False
+,Damien Chazelle,La La Land,True
+,Garth Davis,Lion,False
+,Barry Jenkins,Moonlight,False
+,Kenneth Lonergan,Manchester by the Sea,False
+,Denis Villeneuve,Arrival,False
+,Guillermo del Toro,The Shape of Water,True
+,Greta Gerwig,Lady Bird,False
+,Martin McDonagh,"Three Billboards Outside Ebbing, Missouri",False
+,Christopher Nolan,Dunkirk,False
+,Jordan Peele,Get Out,False
+,Alfonso Cuarón,Roma,True
+,Bradley Cooper,A Star Is Born,False
+,Peter Farrelly,Green Book,False
+,Spike Lee,BlacKkKlansman,False
+,Adam McKay,Vice,False
+,Sam Mendes,1917,True
+,Bong Joon-ho,Parasite,False
+,Martin Scorsese,The Irishman,False
+,Quentin Tarantino,Once Upon a Time in Hollywood,False
+,Taika Waititi,Jojo Rabbit,False
+,Chloé Zhao,Nomadland,True
+,Lee Isaac Chung,Minari,False
+,Emerald Fennell,Promising Young Woman,False
+,David Fincher,Mank,False
+,Aaron Sorkin,The Trial of the Chicago 7,False
+,Jane Campion,The Power of the Dog,True
+,Paul Thomas Anderson,Licorice Pizza,False
+,Kenneth Branagh,Belfast,False
+,Steven Spielberg,West Side Story,False
+,Denis Villeneuve,Dune,False
+,Daniel Kwan and Daniel Scheinert,Everything Everywhere All at Once,True
+,Todd Field,Tár,False
+,Joseph Kosinski,Top Gun: Maverick,False
+,Martin McDonagh,The Banshees of Inisherin,False
+,Steven Spielberg,The Fabelmans,False
+,Christopher Nolan,Oppenheimer,True
+,Greta Gerwig,Barbie,False
+,Yorgos Lanthimos,Poor Things,False
+,Alexander Payne,The Holdovers,False
+,Martin Scorsese,Killers of the Flower Moon,False
+,Sean Baker,Anora,True
+,Jacques Audiard,Emilia Pérez,False
+,Edward Berger,Conclave,False
+,Brady Corbet,The Brutalist,False
+,James Mangold,A Complete Unknown,False
+,Paul Thomas Anderson,One Battle After Another,True
+,Ryan Coogler,Sinners,False
+,Guillermo del Toro,Frankenstein,False
+,Josh Safdie,Marty Supreme,False
+,Chloé Zhao,Hamnet,False

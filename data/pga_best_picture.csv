@@ -1,0 +1,274 @@
+Year,Nominee,Movie,Winner
+,Ref.,,True
+1989(1st),Driving Miss Daisy,Driving Miss Daisy,True
+1989(1st),Ref.,,True
+1990(2nd),Dances with Wolves,Dances with Wolves,True
+1991(3rd),The Silence of the Lambs,The Silence of the Lambs,True
+1991(3rd),At Play in the Fields of the Lord,At Play in the Fields of the Lord,False
+1991(3rd),Boyz n the Hood,Boyz n the Hood,False
+1991(3rd),The Commitments,The Commitments,False
+1991(3rd),JFK,JFK,False
+1991(3rd),The Prince of Tides,The Prince of Tides,False
+1992(4th),The Crying Game,The Crying Game,True
+1992(4th),A Few Good Men,A Few Good Men,False
+1992(4th),Howards End,Howards End,False
+1992(4th),Scent of a Woman,Scent of a Woman,False
+1992(4th),Unforgiven,Unforgiven,False
+1993(5th),Schindler's List,Schindler's List,True
+1993(5th),The Fugitive,The Fugitive,False
+1993(5th),In the Name of the Father,In the Name of the Father,False
+1993(5th),The Piano,The Piano,False
+1993(5th),The Remains of the Day,The Remains of the Day,False
+1994(6th),Forrest Gump,Forrest Gump,True
+1994(6th),Four Weddings and a Funeral,Four Weddings and a Funeral,False
+1994(6th),Pulp Fiction,Pulp Fiction,False
+1994(6th),Quiz Show,Quiz Show,False
+1994(6th),The Shawshank Redemption,The Shawshank Redemption,False
+1995(7th),Apollo 13,Apollo 13,True
+1995(7th),The American President,The American President,False
+1995(7th),The Bridges of Madison County,The Bridges of Madison County,False
+1995(7th),Dead Man Walking,Dead Man Walking,False
+1995(7th),Il Postino: The Postman,Il Postino: The Postman,False
+1995(7th),Leaving Las Vegas,Leaving Las Vegas,False
+1995(7th),Sense and Sensibility,Sense and Sensibility,False
+1996(8th),The English Patient,The English Patient,True
+1996(8th),Fargo,Fargo,False
+1996(8th),Hamlet,Hamlet,False
+1996(8th),The People vs. Larry Flynt,The People vs. Larry Flynt,False
+1996(8th),Shine,Shine,False
+1997(9th),Titanic,Titanic,True
+1997(9th),Amistad,Amistad,False
+1997(9th),As Good as It Gets,As Good as It Gets,False
+1997(9th),Good Will Hunting,Good Will Hunting,False
+1997(9th),L.A. Confidential,L.A. Confidential,False
+1998(10th),Saving Private Ryan,Saving Private Ryan,True
+1998(10th),Gods and Monsters,Gods and Monsters,False
+1998(10th),Life Is Beautiful,Life Is Beautiful,False
+1998(10th),Shakespeare in Love,Shakespeare in Love,False
+1998(10th),Waking Ned,Waking Ned,False
+1999(11th),American Beauty,American Beauty,True
+1999(11th),Being John Malkovich,Being John Malkovich,False
+1999(11th),The Cider House Rules,The Cider House Rules,False
+1999(11th),The Hurricane,The Hurricane,False
+1999(11th),The Insider,The Insider,False
+1999(11th),Ref.,,True
+2000(12th),Gladiator,Gladiator,True
+2000(12th),Almost Famous,Almost Famous,False
+2000(12th),Billy Elliot,Billy Elliot,False
+2000(12th),"Crouching Tiger, Hidden Dragon","Crouching Tiger, Hidden Dragon",False
+2000(12th),Erin Brockovich,Erin Brockovich,False
+2001(13th),Moulin Rouge!,Moulin Rouge!,True
+2001(13th),A Beautiful Mind,A Beautiful Mind,False
+2001(13th),Harry Potter and the Sorcerer's Stone,Harry Potter and the Sorcerer's Stone,False
+2001(13th),The Lord of the Rings: The Fellowship of the Ring,The Lord of the Rings: The Fellowship of the Ring,False
+2001(13th),Shrek,Shrek,False
+2002(14th),Chicago,Chicago,True
+2002(14th),Adaptation,Adaptation,False
+2002(14th),Gangs of New York,Gangs of New York,False
+2002(14th),The Lord of the Rings: The Two Towers,The Lord of the Rings: The Two Towers,False
+2002(14th),My Big Fat Greek Wedding,My Big Fat Greek Wedding,False
+2002(14th),Road to Perdition,Road to Perdition,False
+2003(15th),The Lord of the Rings: The Return of the King,The Lord of the Rings: The Return of the King,True
+2003(15th),Cold Mountain,Cold Mountain,False
+2003(15th),The Last Samurai,The Last Samurai,False
+2003(15th),Master and Commander: The Far Side of the World,Master and Commander: The Far Side of the World,False
+2003(15th),Mystic River,Mystic River,False
+2003(15th),Seabiscuit,Seabiscuit,False
+2004(16th),The Aviator,The Aviator,True
+2004(16th),Finding Neverland,Finding Neverland,False
+2004(16th),The Incredibles,The Incredibles,False
+2004(16th),Million Dollar Baby,Million Dollar Baby,False
+2004(16th),Sideways,Sideways,False
+2005(17th),Brokeback Mountain,Brokeback Mountain,True
+2005(17th),Capote,Capote,False
+2005(17th),Crash,Crash,False
+2005(17th),"Good Night, and Good Luck","Good Night, and Good Luck",False
+2005(17th),Walk the Line,Walk the Line,False
+2006(18th),Little Miss Sunshine,Little Miss Sunshine,True
+2006(18th),Babel,Babel,False
+2006(18th),The Departed,The Departed,False
+2006(18th),Dreamgirls,Dreamgirls,False
+2006(18th),The Queen,The Queen,False
+2007(19th),No Country for Old Men,No Country for Old Men,True
+2007(19th),The Diving Bell and the Butterfly,The Diving Bell and the Butterfly,False
+2007(19th),Juno,Juno,False
+2007(19th),Michael Clayton,Michael Clayton,False
+2007(19th),There Will Be Blood,There Will Be Blood,False
+2008(20th),Slumdog Millionaire,Slumdog Millionaire,True
+2008(20th),The Curious Case of Benjamin Button,The Curious Case of Benjamin Button,False
+2008(20th),The Dark Knight,The Dark Knight,False
+2008(20th),Frost/Nixon,Frost/Nixon,False
+2008(20th),Milk,Milk,False
+2009(21st),The Hurt Locker,The Hurt Locker,True
+2009(21st),Avatar,Avatar,False
+2009(21st),District 9,District 9,False
+2009(21st),An Education,An Education,False
+2009(21st),Inglourious Basterds,Inglourious Basterds,False
+2009(21st),Invictus,Invictus,False
+2009(21st),Precious,Precious,False
+2009(21st),Star Trek,Star Trek,False
+2009(21st),Up,Up,False
+2009(21st),Up in the Air,Up in the Air,False
+2009(21st),Ref.,,True
+2010(22nd),The King's Speech,The King's Speech,True
+2010(22nd),127 Hours,127 Hours,False
+2010(22nd),Black Swan,Black Swan,False
+2010(22nd),The Fighter,The Fighter,False
+2010(22nd),Inception,Inception,False
+2010(22nd),The Kids Are All Right,The Kids Are All Right,False
+2010(22nd),The Social Network,The Social Network,False
+2010(22nd),The Town,The Town,False
+2010(22nd),Toy Story 3,Toy Story 3,False
+2010(22nd),True Grit,True Grit,False
+2011(23rd),The Artist,The Artist,True
+2011(23rd),Bridesmaids,Bridesmaids,False
+2011(23rd),The Descendants,The Descendants,False
+2011(23rd),The Girl with the Dragon Tattoo,The Girl with the Dragon Tattoo,False
+2011(23rd),The Help,The Help,False
+2011(23rd),Hugo,Hugo,False
+2011(23rd),The Ides of March,The Ides of March,False
+2011(23rd),Midnight in Paris,Midnight in Paris,False
+2011(23rd),Moneyball,Moneyball,False
+2011(23rd),War Horse,War Horse,False
+2012(24th),Argo,Argo,True
+2012(24th),Beasts of the Southern Wild,Beasts of the Southern Wild,False
+2012(24th),Django Unchained,Django Unchained,False
+2012(24th),Les Misérables,Les Misérables,False
+2012(24th),Life of Pi,Life of Pi,False
+2012(24th),Lincoln,Lincoln,False
+2012(24th),Moonrise Kingdom,Moonrise Kingdom,False
+2012(24th),Silver Linings Playbook,Silver Linings Playbook,False
+2012(24th),Skyfall,Skyfall,False
+2012(24th),Zero Dark Thirty,Zero Dark Thirty,False
+2013(25th),12 Years a Slave,12 Years a Slave,True
+2013(25th),Gravity,Gravity,True
+2013(25th),American Hustle,American Hustle,False
+2013(25th),Blue Jasmine,Blue Jasmine,False
+2013(25th),Captain Phillips,Captain Phillips,False
+2013(25th),Dallas Buyers Club,Dallas Buyers Club,False
+2013(25th),Her,Her,False
+2013(25th),Nebraska,Nebraska,False
+2013(25th),Saving Mr. Banks,Saving Mr. Banks,False
+2013(25th),The Wolf of Wall Street,The Wolf of Wall Street,False
+2014(26th),Birdman or (The Unexpected Virtue of Ignorance),Birdman or (The Unexpected Virtue of Ignorance),True
+2014(26th),American Sniper,American Sniper,False
+2014(26th),Boyhood,Boyhood,False
+2014(26th),Foxcatcher,Foxcatcher,False
+2014(26th),Gone Girl,Gone Girl,False
+2014(26th),The Grand Budapest Hotel,The Grand Budapest Hotel,False
+2014(26th),The Imitation Game,The Imitation Game,False
+2014(26th),Nightcrawler,Nightcrawler,False
+2014(26th),The Theory of Everything,The Theory of Everything,False
+2014(26th),Whiplash,Whiplash,False
+2015(27th),The Big Short,The Big Short,True
+2015(27th),Bridge of Spies,Bridge of Spies,False
+2015(27th),Brooklyn,Brooklyn,False
+2015(27th),Ex Machina,Ex Machina,False
+2015(27th),Mad Max: Fury Road,Mad Max: Fury Road,False
+2015(27th),The Martian,The Martian,False
+2015(27th),The Revenant,The Revenant,False
+2015(27th),Sicario,Sicario,False
+2015(27th),Spotlight,Spotlight,False
+2015(27th),Straight Outta Compton,Straight Outta Compton,False
+2016(28th),La La Land,La La Land,True
+2016(28th),Arrival,Arrival,False
+2016(28th),Deadpool,Deadpool,False
+2016(28th),Fences,Fences,False
+2016(28th),Hacksaw Ridge,Hacksaw Ridge,False
+2016(28th),Hell or High Water,Hell or High Water,False
+2016(28th),Hidden Figures,Hidden Figures,False
+2016(28th),Lion,Lion,False
+2016(28th),Manchester by the Sea,Manchester by the Sea,False
+2016(28th),Moonlight,Moonlight,False
+2017(29th),The Shape of Water,The Shape of Water,True
+2017(29th),The Big Sick,The Big Sick,False
+2017(29th),Call Me by Your Name,Call Me by Your Name,False
+2017(29th),Dunkirk,Dunkirk,False
+2017(29th),Get Out,Get Out,False
+2017(29th),"I, Tonya","I, Tonya",False
+2017(29th),Lady Bird,Lady Bird,False
+2017(29th),Molly's Game,Molly's Game,False
+2017(29th),The Post,The Post,False
+2017(29th),"Three Billboards Outside Ebbing, Missouri","Three Billboards Outside Ebbing, Missouri",False
+2017(29th),Wonder Woman,Wonder Woman,False
+2018(30th),Green Book,Green Book,True
+2018(30th),Black Panther,Black Panther,False
+2018(30th),BlacKkKlansman,BlacKkKlansman,False
+2018(30th),Bohemian Rhapsody,Bohemian Rhapsody,False
+2018(30th),Crazy Rich Asians,Crazy Rich Asians,False
+2018(30th),The Favourite,The Favourite,False
+2018(30th),A Quiet Place,A Quiet Place,False
+2018(30th),Roma,Roma,False
+2018(30th),A Star Is Born,A Star Is Born,False
+2018(30th),Vice,Vice,False
+2019(31st),1917,1917,True
+2019(31st),Ford v Ferrari,Ford v Ferrari,False
+2019(31st),The Irishman,The Irishman,False
+2019(31st),Jojo Rabbit,Jojo Rabbit,False
+2019(31st),Joker,Joker,False
+2019(31st),Knives Out,Knives Out,False
+2019(31st),Little Women,Little Women,False
+2019(31st),Marriage Story,Marriage Story,False
+2019(31st),Once Upon a Time in Hollywood,Once Upon a Time in Hollywood,False
+2019(31st),Parasite,Parasite,False
+2019(31st),Ref.,,True
+2020(32nd),Nomadland,Nomadland,True
+2020(32nd),Borat Subsequent Moviefilm,Borat Subsequent Moviefilm,False
+2020(32nd),Judas and the Black Messiah,Judas and the Black Messiah,False
+2020(32nd),Ma Rainey’s Black Bottom,Ma Rainey’s Black Bottom,False
+2020(32nd),Mank,Mank,False
+2020(32nd),Minari,Minari,False
+2020(32nd),One Night in Miami...,One Night in Miami...,False
+2020(32nd),Promising Young Woman,Promising Young Woman,False
+2020(32nd),Sound of Metal,Sound of Metal,False
+2020(32nd),The Trial of the Chicago 7,The Trial of the Chicago 7,False
+2021(33rd),CODA,CODA,True
+2021(33rd),Being the Ricardos,Being the Ricardos,False
+2021(33rd),Belfast,Belfast,False
+2021(33rd),Don't Look Up,Don't Look Up,False
+2021(33rd),Dune,Dune,False
+2021(33rd),King Richard,King Richard,False
+2021(33rd),Licorice Pizza,Licorice Pizza,False
+2021(33rd),The Power of the Dog,The Power of the Dog,False
+2021(33rd),"Tick, Tick... Boom!","Tick, Tick... Boom!",False
+2021(33rd),West Side Story,West Side Story,False
+2022(34th),Everything Everywhere All at Once,Everything Everywhere All at Once,True
+2022(34th),Avatar: The Way of Water,Avatar: The Way of Water,False
+2022(34th),The Banshees of Inisherin,The Banshees of Inisherin,False
+2022(34th),Black Panther: Wakanda Forever,Black Panther: Wakanda Forever,False
+2022(34th),Elvis,Elvis,False
+2022(34th),The Fabelmans,The Fabelmans,False
+2022(34th),Glass Onion: A Knives Out Mystery,Glass Onion: A Knives Out Mystery,False
+2022(34th),Tár,Tár,False
+2022(34th),Top Gun: Maverick,Top Gun: Maverick,False
+2022(34th),The Whale,The Whale,False
+2023(35th),Oppenheimer,Oppenheimer,True
+2023(35th),American Fiction,American Fiction,False
+2023(35th),Anatomy of a Fall,Anatomy of a Fall,False
+2023(35th),Barbie,Barbie,False
+2023(35th),The Holdovers,The Holdovers,False
+2023(35th),Killers of the Flower Moon,Killers of the Flower Moon,False
+2023(35th),Maestro,Maestro,False
+2023(35th),Past Lives,Past Lives,False
+2023(35th),Poor Things,Poor Things,False
+2023(35th),The Zone of Interest,The Zone of Interest,False
+2024(36th),Anora,Anora,True
+2024(36th),The Brutalist,The Brutalist,False
+2024(36th),A Complete Unknown,A Complete Unknown,False
+2024(36th),Conclave,Conclave,False
+2024(36th),Dune: Part Two,Dune: Part Two,False
+2024(36th),Emilia Pérez,Emilia Pérez,False
+2024(36th),A Real Pain,A Real Pain,False
+2024(36th),September 5,September 5,False
+2024(36th),The Substance,The Substance,False
+2024(36th),Wicked,Wicked,False
+2025(37th),One Battle After Another,One Battle After Another,True
+2025(37th),Bugonia,Bugonia,False
+2025(37th),F1,F1,False
+2025(37th),Frankenstein,Frankenstein,False
+2025(37th),Hamnet,Hamnet,False
+2025(37th),Marty Supreme,Marty Supreme,False
+2025(37th),Sentimental Value,Sentimental Value,False
+2025(37th),Sinners,Sinners,False
+2025(37th),Train Dreams,Train Dreams,False
+2025(37th),Weapons,Weapons,False
