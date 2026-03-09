@@ -8,18 +8,18 @@ import re
 # CONFIG
 # --------------------------
 CATEGORIES = {
-    # "gg_best_picture": {
-    #     "url": "https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Motion_Picture_%E2%80%93_Drama",
-    #     "skip_tables": [0]  # Example skip for problematic tables
-    # },
-    # "gg_best_comedy": {
-    #     "url": "https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Motion_Picture_%E2%80%93_Musical_or_Comedy",
-    #     "skip_tables": []
-    # },
-    # "bafta_best_picture":{
-    #     "url": "https://en.wikipedia.org/wiki/BAFTA_Award_for_Best_Film",
-    #     "skip_tables": [9]
-    # },
+    "gg_best_picture": {
+        "url": "https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Motion_Picture_%E2%80%93_Drama",
+        "skip_tables": [0]  # Example skip for problematic tables
+    },
+    "gg_best_comedy": {
+        "url": "https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Motion_Picture_%E2%80%93_Musical_or_Comedy",
+        "skip_tables": []
+    },
+    "bafta_best_picture":{
+        "url": "https://en.wikipedia.org/wiki/BAFTA_Award_for_Best_Film",
+        "skip_tables": [9]
+    },
     "sag_best_picture":{
         "url": "https://en.wikipedia.org/wiki/Actor_Award_for_Outstanding_Performance_by_a_Cast_in_a_Motion_Picture",
         "skip_tables": []
