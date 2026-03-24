@@ -14,7 +14,18 @@ from dotenv import load_dotenv
 sys.path.insert(0, str(Path(__file__).parent))
 
 from ingesters.tmdb_ingester import TMDbIngester
-from scrapers.wikipedia_scraper import ImprovedAcademyAwardsScraper as AcademyAwardsScraper
+from scrapers.wikipedia_scraper import (
+    ImprovedAcademyAwardsScraper as AcademyAwardsScraper,
+    BAFTAAwardsScraper,
+    GoldenGlobesScraper,
+    SAGAwardsScraper,
+    CriticsChoiceAwardsScraper,
+    IndependentSpiritAwardsScraper,
+    CannesAwardsScraper,
+    VeniceAwardsScraper,
+    BerlinAwardsScraper,
+    AllAwardsScraper,
+)
 from utils.storage import DataStorage, DataMatcher
 
 # Setup logging
@@ -45,8 +56,22 @@ class DataCollectionPipeline:
         # Initialize components
         self.tmdb_ingester = TMDbIngester()
         self.oscars_scraper = AcademyAwardsScraper()
+        self.all_awards_scraper = AllAwardsScraper()
         self.storage = DataStorage(data_dir)
-        
+
+        # Individual scrapers available for targeted use
+        self.scrapers = {
+            'academy': AcademyAwardsScraper(),
+            'bafta': BAFTAAwardsScraper(),
+            'golden_globes': GoldenGlobesScraper(),
+            'sag': SAGAwardsScraper(),
+            'critics_choice': CriticsChoiceAwardsScraper(),
+            'spirit': IndependentSpiritAwardsScraper(),
+            'cannes': CannesAwardsScraper(),
+            'venice': VeniceAwardsScraper(),
+            'berlin': BerlinAwardsScraper(),
+        }
+
         logger.info("Data Collection Pipeline initialized")
     
     def collect_movies_for_year(self, year: int, max_pages: int = 10):
@@ -133,6 +158,70 @@ class DataCollectionPipeline:
         logger.info(f"Collected {len(awards)} Academy Awards nominations for {year}")
         return awards
     
+    def collect_awards_from_source(self, source: str, year: int):
+        """
+        Collect awards from a single named source for one year.
+
+        Args:
+            source: One of 'academy', 'bafta', 'golden_globes', 'sag',
+                    'critics_choice', 'spirit', 'cannes', 'venice', 'berlin'
+            year: Ceremony/festival year
+        """
+        if source not in self.scrapers:
+            raise ValueError(f"Unknown source '{source}'. Choose from: {list(self.scrapers)}")
+
+        scraper = self.scrapers[source]
+        logger.info(f"Collecting {scraper.AWARD_NAME} for {year}")
+        awards = scraper.scrape_year(year)
+
+        filename = f'{source}_awards_{year}_{datetime.now().strftime("%Y%m%d")}.json'
+        self.storage.save_awards_to_json(awards, filename)
+
+        csv_filename = f'{source}_awards_{year}_{datetime.now().strftime("%Y%m%d")}.csv'
+        self.storage.save_awards_to_csv(awards, csv_filename)
+
+        logger.info(f"Collected {len(awards)} {scraper.AWARD_NAME} nominations for {year}")
+        return awards
+
+    def collect_all_awards_for_year(self, year: int):
+        """
+        Collect acting and screenplay awards from all supported sources for one year.
+
+        Sources: Academy Awards, BAFTAs, Golden Globes, SAG Awards,
+                 Critics' Choice, Independent Spirit Awards,
+                 Cannes, Venice, Berlin.
+
+        Args:
+            year: Ceremony/festival year
+        """
+        logger.info(f"Collecting all awards for {year}")
+        awards = self.all_awards_scraper.scrape_year(year)
+
+        filename = f'all_awards_{year}_{datetime.now().strftime("%Y%m%d")}.json'
+        self.storage.save_awards_to_json(awards, filename)
+
+        csv_filename = f'all_awards_{year}_{datetime.now().strftime("%Y%m%d")}.csv'
+        self.storage.save_awards_to_csv(awards, csv_filename)
+
+        logger.info(f"Collected {len(awards)} total awards for {year}")
+        return awards
+
+    def collect_all_awards_for_year_range(self, start_year: int, end_year: int):
+        """
+        Collect acting and screenplay awards from all sources across a year range.
+        """
+        logger.info(f"Collecting all awards from {start_year} to {end_year}")
+        all_awards = self.all_awards_scraper.scrape_multiple_years(start_year, end_year)
+
+        filename = f'all_awards_{start_year}_{end_year}_{datetime.now().strftime("%Y%m%d")}.json'
+        self.storage.save_awards_to_json(all_awards, filename)
+
+        csv_filename = f'all_awards_{start_year}_{end_year}_{datetime.now().strftime("%Y%m%d")}.csv'
+        self.storage.save_awards_to_csv(all_awards, csv_filename)
+
+        logger.info(f"Total awards collected: {len(all_awards)}")
+        return all_awards
+
     def collect_academy_awards_for_year_range(
         self,
         start_year: int,
@@ -212,9 +301,9 @@ class DataCollectionPipeline:
         logger.info("Step 1/2: Collecting movie data")
         movies = self.collect_movies_for_year_range(start_year, end_year)
         
-        # Collect awards
-        logger.info("Step 2/2: Collecting awards data")
-        awards = self.collect_academy_awards_for_year_range(start_year, end_year)
+        # Collect awards from all sources
+        logger.info("Step 2/2: Collecting awards data (all sources)")
+        awards = self.collect_all_awards_for_year_range(start_year, end_year)
         
         logger.info("Historical collection complete!")
         logger.info(f"  Movies: {len(movies)}")
@@ -229,9 +318,18 @@ def main():
     
     parser.add_argument(
         '--mode',
-        choices=['movies', 'awards', 'full', 'enrich'],
+        choices=['movies', 'awards', 'all-awards', 'full', 'enrich'],
         required=True,
         help='Collection mode'
+    )
+
+    parser.add_argument(
+        '--source',
+        choices=[
+            'academy', 'bafta', 'golden_globes', 'sag',
+            'critics_choice', 'spirit', 'cannes', 'venice', 'berlin'
+        ],
+        help='Awards source (for --mode awards)'
     )
     
     parser.add_argument(
@@ -273,10 +371,20 @@ def main():
             pipeline.collect_movies_for_year_range(args.start_year, args.end_year)
     
     elif args.mode == 'awards':
+        source = args.source or 'academy'
         if args.year:
-            pipeline.collect_academy_awards_for_year(args.year)
+            pipeline.collect_awards_from_source(source, args.year)
         else:
-            pipeline.collect_academy_awards_for_year_range(args.start_year, args.end_year)
+            scraper = pipeline.scrapers[source]
+            awards = scraper.scrape_multiple_years(args.start_year, args.end_year)
+            filename = f'{source}_awards_{args.start_year}_{args.end_year}_{datetime.now().strftime("%Y%m%d")}.json'
+            pipeline.storage.save_awards_to_json(awards, filename)
+
+    elif args.mode == 'all-awards':
+        if args.year:
+            pipeline.collect_all_awards_for_year(args.year)
+        else:
+            pipeline.collect_all_awards_for_year_range(args.start_year, args.end_year)
     
     elif args.mode == 'full':
         pipeline.full_historical_collection(args.start_year, args.end_year)
