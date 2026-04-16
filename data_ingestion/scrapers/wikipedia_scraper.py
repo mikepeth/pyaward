@@ -166,6 +166,29 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
             if not self._is_major_category(category):
                 continue
 
+            is_person_cat = self._is_person_category(category)
+
+            # Some older Wikipedia pages put the winner in <p><b>...</b></p>
+            # directly after the category div, before the nominees <ul>.
+            winner_p = td.find('p')
+            if winner_p and winner_p.find('b'):
+                w_links = winner_p.find_all('a', href=True)
+                w_movie, w_person = self._extract_movie_and_person(
+                    w_links, category, person_first=is_person_cat
+                )
+                if w_movie or w_person:
+                    awards.append(Award(
+                        award_name=self.AWARD_NAME,
+                        ceremony_year=year,
+                        ceremony_number=ceremony_number,
+                        category=category,
+                        movie_title=w_movie,
+                        person_name=w_person,
+                        person_role=self._get_person_role(category) if w_person else None,
+                        won=True,
+                        nominated=True,
+                    ))
+
             ul = td.find('ul')
             if not ul:
                 continue
@@ -279,15 +302,17 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
             is_winner = bool(top_li.find('b'))
             nested_ul = top_li.find('ul')
 
-            # Collect links from this li BEFORE the nested ul
+            # Collect links from this li BEFORE the nested ul.
+            # Check for direct <a> children first — calling find_all on an
+            # <a> tag searches for nested <a> elements (finds nothing).
             top_links = []
             for child in top_li.children:
                 if hasattr(child, 'name') and child.name == 'ul':
                     break
-                if hasattr(child, 'find_all'):
-                    top_links.extend(child.find_all('a', href=True))
-                elif hasattr(child, 'name') and child.name == 'a':
+                if hasattr(child, 'name') and child.name == 'a' and child.get('href'):
                     top_links.append(child)
+                elif hasattr(child, 'find_all'):
+                    top_links.extend(child.find_all('a', href=True))
 
             movie_title, person_name = self._extract_movie_and_person(
                 top_links, category, person_first=is_person_cat
@@ -411,7 +436,9 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
             if not links:
                 continue
 
-            movie_title, person_name = self._extract_movie_and_person(links, category)
+            movie_title, person_name = self._extract_movie_and_person(
+                links, category, person_first=self._is_person_category(category)
+            )
             nominees.append(Award(
                 award_name=self.AWARD_NAME,
                 ceremony_year=year,
@@ -442,7 +469,10 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
             links = cells[0].find_all('a', href=True)
             if not links:
                 continue
-            movie_title, person_name = self._extract_movie_and_person(links, category)
+            is_person_cat = self._is_person_category(category)
+            movie_title, person_name = self._extract_movie_and_person(
+                links, category, person_first=is_person_cat
+            )
             nominees.append(Award(
                 award_name=self.AWARD_NAME,
                 ceremony_year=year,
@@ -456,24 +486,66 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
             ))
         return nominees
 
+    @staticmethod
+    def _link_is_italic(link) -> bool:
+        """Return True if the link's nearest block ancestor is an <i> or <em> tag."""
+        node = link.parent
+        while node and node.name not in ('td', 'th', 'li', 'ul', 'ol', 'body', None):
+            if node.name in ('i', 'em'):
+                return True
+            node = node.parent
+        return False
+
     def _extract_movie_and_person(self, links, category: str, person_first: bool = False):
         """
         Return (movie_title, person_name) from a list of anchor tags.
 
-        person_first=True  → order is  Person – Film  (acting/directing categories
-                             in many modern Wikipedia layouts)
-        person_first=False → order is  Film – Person  (older table layouts)
+        Wikipedia consistently wraps movie titles in <i>/<em>.  We use that
+        as the primary signal; position-based logic (person_first) is a fallback
+        when no italic markers are present.
+
+        For categories like Best Original Song the song title appears as a plain
+        link BEFORE the italic movie link.  To avoid capturing the song title as
+        the person we only consider plain links that come AFTER the first italic
+        link as candidate person names.
         """
         movie_title = None
         person_name = None
         is_person = self._is_person_category(category)
 
+        # Single-pass: collect (text, is_italic) tuples for valid links
+        tagged = []
         for link in links:
             link_text = self._clean_text(link.get_text())
             href = link.get('href', '')
             if not link_text or href.startswith('#'):
                 continue
+            tagged.append((link_text, self._link_is_italic(link)))
 
+        # Find first italic (movie) position
+        first_italic_pos = next((i for i, (_, ital) in enumerate(tagged) if ital), None)
+        if first_italic_pos is not None:
+            movie_title = tagged[first_italic_pos][0]
+            if is_person:
+                plain_before = [t for t, ital in tagged[:first_italic_pos] if not ital]
+                plain_after  = [t for t, ital in tagged[first_italic_pos + 1:] if not ital]
+
+                # Best Original Song (and similar): "Song Title" appears as a plain
+                # link BEFORE the italic movie title, while the actual songwriter
+                # follows it.  For all other categories, prefer the plain link that
+                # comes before the movie (old-format pages like early BAFTA put the
+                # person first: "Actor – <i>Movie</i> as Character").
+                category_lower = category.lower()
+                if 'song' in category_lower:
+                    person_name = plain_after[0] if plain_after else None
+                elif plain_before:
+                    person_name = plain_before[0]
+                elif plain_after:
+                    person_name = plain_after[0]
+            return movie_title, person_name
+
+        # Fallback: position-based when no italics are detected
+        for link_text, _ in tagged:
             if person_first and is_person:
                 if person_name is None:
                     person_name = link_text
@@ -525,17 +597,32 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
         return False
 
     def _is_person_category(self, category: str) -> bool:
-        person_keywords = [
-            'actor', 'actress', 'director', 'writer', 'screenplay',
-            'male lead', 'female lead', 'performance', 'leading role',
-            'supporting role', 'supporting male', 'supporting female'
-        ]
         category_lower = category.lower()
+        # Ensemble/cast awards list the film as the primary nominee, not a person
+        if 'cast' in category_lower:
+            return False
+        # Country/language links are not person names (Best International Feature Film)
+        if any(p in category_lower for p in ('international', 'foreign language', 'non-english')):
+            return False
+        person_keywords = [
+            'actor', 'actress', 'director', 'directing',
+            'writer', 'writing', 'screenplay',
+            'male lead', 'female lead', 'performance', 'leading role',
+            'supporting role', 'supporting male', 'supporting female',
+            # Craft / technical categories that credit individual persons
+            'cinematograph',  # cinematographer
+            'film editing',   # editor
+            'music',          # composer / songwriter
+            # Film awards that credit specific persons (producers, directors)
+            'picture',        # Best Picture → producers
+            'animated',       # Best Animated Feature → director
+            'documentary',    # Best Documentary Feature → director/producer
+        ]
         return any(kw in category_lower for kw in person_keywords)
 
     def _get_person_role(self, category: str) -> str:
         cl = category.lower()
-        if 'director' in cl:
+        if 'director' in cl or 'directing' in cl:
             return 'Director'
         if 'screenplay' in cl or 'writer' in cl or 'writing' in cl:
             return 'Writer'
@@ -543,12 +630,20 @@ class BaseCeremonyAwardsScraper(WikipediaAwardsScraper):
             return 'Supporting Actor'
         if any(kw in cl for kw in ['actor', 'actress', 'male lead', 'female lead', 'leading role', 'performance']):
             return 'Lead Actor'
-        if 'cinematography' in cl:
+        if 'cinematograph' in cl:
             return 'Cinematographer'
-        if 'editing' in cl:
+        if 'editing' in cl or 'film edit' in cl:
             return 'Editor'
-        if 'score' in cl or 'song' in cl:
+        if 'song' in cl:
+            return 'Songwriter'
+        if 'music' in cl or 'score' in cl:
             return 'Composer'
+        if 'animated' in cl:
+            return 'Director'
+        if 'documentary' in cl:
+            return 'Director'
+        if 'picture' in cl:
+            return 'Producer'
         return 'Unknown'
 
 
@@ -562,17 +657,16 @@ class ImprovedAcademyAwardsScraper(BaseCeremonyAwardsScraper):
     AWARD_NAME = "Academy Awards"
     MAJOR_CATEGORIES = [
         'Best Picture',
-        'Best Director',
-        'Best Actor',
-        'Best Actress',
-        'Best Supporting Actor',
-        'Best Supporting Actress',
-        'Best Original Screenplay',
-        'Best Adapted Screenplay',
+        # Direction — modern pages say "Best Directing", older say "Best Director"
+        'Best Director', 'Best Directing',
+        'Best Actor', 'Best Actress',
+        'Best Supporting Actor', 'Best Supporting Actress',
+        # Screenplay — modern pages say "Best Writing (Original/Adapted Screenplay)"
+        'Best Original Screenplay', 'Best Adapted Screenplay', 'Best Writing',
         'Best Cinematography',
         'Best Film Editing',
-        'Best Original Score',
-        'Best Original Song',
+        # Music — modern pages say "Best Music (Original Score/Song)"
+        'Best Original Score', 'Best Original Song', 'Best Music',
         'Best Animated Feature',
         'Best International Feature Film',
         'Best Documentary Feature',
@@ -656,15 +750,17 @@ class ImprovedAcademyAwardsScraper(BaseCeremonyAwardsScraper):
                 is_winner = bool(top_li.find('b'))
                 nested_ul = top_li.find('ul')
 
-                # Collect links from this li BEFORE the nested ul starts
+                # Collect links from this li BEFORE the nested ul starts.
+                # Check for direct <a> children first — calling find_all on an
+                # <a> tag searches for nested <a> elements (finds nothing).
                 top_links = []
                 for child in top_li.children:
                     if hasattr(child, 'name') and child.name == 'ul':
                         break
-                    if hasattr(child, 'find_all'):
-                        top_links.extend(child.find_all('a', href=True))
-                    elif hasattr(child, 'name') and child.name == 'a':
+                    if hasattr(child, 'name') and child.name == 'a' and child.get('href'):
                         top_links.append(child)
+                    elif hasattr(child, 'find_all'):
+                        top_links.extend(child.find_all('a', href=True))
 
                 movie_title, person_name = self._extract_movie_and_person(
                     top_links, category, person_first=is_person_cat
@@ -740,18 +836,32 @@ class GoldenGlobesScraper(BaseCeremonyAwardsScraper):
     """Scraper for the Golden Globe Awards"""
 
     AWARD_NAME = "Golden Globe Awards"
+    # Modern Wikipedia pages use a two-level th structure.  The MAJOR_CATEGORIES
+    # terms are substrings that will match the compound names we build from
+    # (spanning-header + sub-header), e.g. "Best Motion Picture – Drama".
     MAJOR_CATEGORIES = [
-        'Best Motion Picture',
+        'Best Motion Picture',           # matches Drama, Musical or Comedy, Animated, Non-English variants
         'Best Director',
-        # Acting — split by drama / musical or comedy
+        'Best Performance in a Motion Picture',  # matches all Drama/Comedy acting variants
+        'Best Supporting Performance',   # matches supporting actor/actress
+        'Best Screenplay',
+        'Non-English Language',          # matches Non-English Language sub-category
+        # Legacy names used in older Wikipedia pages
         'Best Actor in a Motion Picture',
         'Best Actress in a Motion Picture',
         'Best Supporting Actor',
         'Best Supporting Actress',
-        'Best Screenplay',
         'Best Animated Feature Film',
-        'Best Non-English Language Film',
+        'Best Foreign Language Film',
     ]
+
+    _TV_MARKERS = ['television', 'tv series', 'tv movie', 'miniseries',
+                   'limited series', 'drama series', 'comedy series']
+
+    def _is_major_category(self, category: str) -> bool:
+        if any(m in category.lower() for m in self._TV_MARKERS):
+            return False
+        return super()._is_major_category(category)
 
     def scrape_year(self, year: int) -> List[Award]:
         """Scrape Golden Globe Awards for ceremony year (e.g. 2024 = 81st)."""
@@ -764,6 +874,134 @@ class GoldenGlobesScraper(BaseCeremonyAwardsScraper):
         except Exception as e:
             logger.error(f"Error scraping Golden Globes {year}: {e}")
             return []
+
+    def _scrape_page(self, url: str, year: int, ceremony_number: int) -> List[Award]:
+        """
+        Try Globes-specific two-level table parser first, then fall back to
+        the base strategy chain.
+        """
+        soup = self._fetch_page(url)
+
+        awards = self._parse_globes_film_tables(soup, year, ceremony_number)
+        if not awards:
+            awards = self._parse_standard_tables(soup, year, ceremony_number)
+        if not awards:
+            awards = self._parse_presentation_table(soup, year, ceremony_number)
+        if not awards:
+            awards = self._parse_th_header_tables(soup, year, ceremony_number)
+        if not awards:
+            awards = self._parse_by_sections(soup, year, ceremony_number)
+        if not awards:
+            awards = self._parse_lists(soup, year, ceremony_number)
+
+        logger.info(f"Scraped {len(awards)} nominations/wins for {self.AWARD_NAME} {year}")
+        return awards
+
+    def _parse_globes_film_tables(
+        self,
+        soup: BeautifulSoup,
+        year: int,
+        ceremony_number: int,
+    ) -> List[Award]:
+        """
+        Parse the Golden Globes Wikipedia layout where film categories live in
+        wikitables that use a two-level <th> structure:
+
+          <tr><th colspan="2">Best Motion Picture</th></tr>   ← spanning header
+          <tr><th>Drama</th><th>Musical or Comedy</th></tr>   ← sub-headers
+          <tr><td>nominees…</td><td>nominees…</td></tr>       ← data
+
+        Multiple (sub-header, data) pairs can follow a single spanning header.
+        When the sub-header text is already a full category name (e.g.
+        "Best Director"), the spanning context is ignored.
+        """
+        awards = []
+
+        # Only look at tables in the Film section (stop at TV heading)
+        film_tables = self._get_film_section_tables(soup)
+
+        for table in film_tables:
+            rows = table.find_all('tr')
+            span_context: Optional[str] = None
+            i = 0
+
+            while i < len(rows):
+                row = rows[i]
+                ths = row.find_all('th')
+                tds = row.find_all('td')
+
+                if ths and not tds:
+                    is_spanning = len(ths) == 1 and ths[0].get('colspan')
+
+                    if is_spanning:
+                        # Remember this as context for following sub-header rows
+                        span_context = self._clean_text(ths[0].get_text())
+                        i += 1
+                        continue
+
+                    # Sub-header (or standalone category) row
+                    cats = []
+                    for th in ths:
+                        sub_text = self._clean_text(th.get_text())
+                        # If the sub-header looks like a full category name (starts
+                        # with "Best") it should stand alone — don't inherit the
+                        # span context or it creates spurious compound names like
+                        # "Best Supporting Performance – Best Original Score".
+                        if sub_text.startswith('Best'):
+                            compound = sub_text
+                        elif span_context:
+                            compound = f"{span_context} – {sub_text}"
+                        else:
+                            compound = sub_text
+
+                        if self._is_major_category(compound):
+                            cats.append(compound)
+                        else:
+                            cats.append(None)
+
+                    if any(cats):
+                        i += 1
+                        if i < len(rows):
+                            data_row = rows[i]
+                            td_cells = data_row.find_all('td')
+                            for j, cat in enumerate(cats):
+                                if cat and j < len(td_cells):
+                                    ul = td_cells[j].find('ul')
+                                    if ul:
+                                        awards.extend(
+                                            self._parse_winner_nominee_list(
+                                                ul, cat, year, ceremony_number
+                                            )
+                                        )
+                            i += 1
+                        continue
+
+                i += 1
+
+        return awards
+
+    def _get_film_section_tables(self, soup: BeautifulSoup):
+        """Return wikitables that belong to the Film section (before Television)."""
+        tables = []
+        in_film_section = False
+
+        for elem in soup.find_all(['h2', 'h3', 'table']):
+            if elem.name in ['h2', 'h3']:
+                text = self._clean_text(elem.get_text()).lower()
+                if 'film' in text or 'cinema' in text or 'motion picture' in text:
+                    in_film_section = True
+                elif 'television' in text or 'tv' in text:
+                    in_film_section = False
+            elif elem.name == 'table' and 'wikitable' in elem.get('class', []):
+                if in_film_section:
+                    tables.append(elem)
+
+        # Fallback: if section detection failed (e.g. no Film/TV headings),
+        # return all wikitables and let the category filter sort it out.
+        if not tables:
+            tables = soup.find_all('table', class_='wikitable')
+
+        return tables
 
 
 class SAGAwardsScraper(BaseCeremonyAwardsScraper):
@@ -779,6 +1017,15 @@ class SAGAwardsScraper(BaseCeremonyAwardsScraper):
         # SAG uses "Outstanding Cast" for ensemble
         'Outstanding Cast',
     ]
+
+    # SAG pages include TV categories; exclude them
+    _TV_MARKERS = ['television', 'tv movie', 'miniseries', 'drama series',
+                   'comedy series', 'limited series', 'variety']
+
+    def _is_major_category(self, category: str) -> bool:
+        if any(m in category.lower() for m in self._TV_MARKERS):
+            return False
+        return super()._is_major_category(category)
 
     def scrape_year(self, year: int) -> List[Award]:
         """Scrape SAG Awards for ceremony year (e.g. 2024 = 30th)."""
@@ -809,6 +1056,14 @@ class CriticsChoiceAwardsScraper(BaseCeremonyAwardsScraper):
         'Best Animated Feature',
         'Best Foreign Language Film',
     ]
+
+    # CC pages combine film + TV; drop TV categories
+    _TV_MARKERS = ['series', 'television', 'limited series', 'movie made for']
+
+    def _is_major_category(self, category: str) -> bool:
+        if any(m in category.lower() for m in self._TV_MARKERS):
+            return False
+        return super()._is_major_category(category)
 
     def scrape_year(self, year: int) -> List[Award]:
         """Scrape Critics' Choice Awards (e.g. 2024 = 29th)."""
@@ -876,7 +1131,9 @@ class BaseFestivalAwardsScraper(BaseCeremonyAwardsScraper):
         logger.info(f"Scraping {self.AWARD_NAME} {year} — {url}")
         try:
             soup = self._fetch_page(url)
-            awards = self._parse_festival_page(soup, year, ceremony_number)
+            awards = self._parse_festival_li_awards(soup, year, ceremony_number)
+            if not awards:
+                awards = self._parse_festival_page(soup, year, ceremony_number)
             if not awards:
                 awards = self._parse_standard_tables(soup, year, ceremony_number)
             if not awards:
@@ -887,6 +1144,105 @@ class BaseFestivalAwardsScraper(BaseCeremonyAwardsScraper):
             logger.error(f"Error scraping {self.AWARD_NAME} {year}: {e}")
             return []
 
+    def _parse_festival_li_awards(
+        self,
+        soup: BeautifulSoup,
+        year: int,
+        ceremony_number: Optional[int],
+    ) -> List[Award]:
+        """
+        Parse the modern Cannes/Venice/Berlin Wikipedia layout where every
+        award winner is a plain list item:
+
+          <li><a>Award Name</a>: <i><a>Film Title</a></i> by <a>Director</a></li>
+
+        The first non-italic link is the award category; the italic link is the
+        movie title; subsequent plain links (if this is a person category) are
+        the recipient's name.
+
+        We scan all <li> elements on the page, skipping navigation/TOC items.
+        """
+        awards = []
+        seen: set = set()
+
+        for li in soup.find_all('li'):
+            # Skip TOC / navigation list items
+            if li.find_parent(class_='vector-toc-list'):
+                continue
+            if li.find_parent(id='toc'):
+                continue
+            parent_classes = ' '.join(li.get('class', []))
+            if 'toc' in parent_classes or 'vector' in parent_classes:
+                continue
+
+            links = [
+                a for a in li.find_all('a', href=True)
+                if not a.get('href', '').startswith('#')
+                and self._clean_text(a.get_text())
+            ]
+            if len(links) < 1:
+                continue
+
+            # Category: first non-italic, internal Wikipedia link whose text
+            # matches a major category.  Require href starts with "/wiki/" to
+            # exclude external citation links (e.g. news headlines that happen
+            # to mention an award name in their title).
+            category = None
+            for idx, link in enumerate(links):
+                href = link.get('href', '')
+                if not href.startswith('/wiki/'):
+                    continue
+                if not self._link_is_italic(link):
+                    candidate = self._clean_text(link.get_text())
+                    # Sanity-check: category names are short
+                    if len(candidate) > 80:
+                        continue
+                    if self._is_major_category(candidate):
+                        category = candidate
+                        break
+
+            if not category:
+                continue
+
+            # Movie title: first italic link
+            movie_title = None
+            for link in links:
+                if self._link_is_italic(link):
+                    movie_title = self._clean_text(link.get_text())
+                    break
+
+            if not movie_title:
+                continue
+
+            # Deduplicate (same award may appear in infobox AND body text)
+            key = (category, movie_title)
+            if key in seen:
+                continue
+            seen.add(key)
+
+            # Person: first plain link that isn't the category itself
+            person_name = None
+            if self._is_person_category(category):
+                for link in links:
+                    text = self._clean_text(link.get_text())
+                    if not self._link_is_italic(link) and text != category:
+                        person_name = text
+                        break
+
+            awards.append(Award(
+                award_name=self.AWARD_NAME,
+                ceremony_year=year,
+                ceremony_number=ceremony_number,
+                category=category,
+                movie_title=movie_title,
+                person_name=person_name,
+                person_role=self._get_person_role(category) if person_name else None,
+                won=True,
+                nominated=True,
+            ))
+
+        return awards
+
     def _parse_festival_page(
         self,
         soup: BeautifulSoup,
@@ -894,9 +1250,8 @@ class BaseFestivalAwardsScraper(BaseCeremonyAwardsScraper):
         ceremony_number: Optional[int]
     ) -> List[Award]:
         """
-        Parse a festival awards page.  Looks for a wikitable inside an 'Awards'
-        section, then falls back to searching all wikitables whose preceding
-        header matches a tracked category.
+        Fallback: parse a festival awards page looking for a wikitable inside
+        an 'Awards' section.
         """
         awards = []
 
